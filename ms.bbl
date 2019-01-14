@@ -1,0 +1,67 @@
+ \newcommand{\noop}[1]{}
+\begin{thebibliography}{}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\href{#1}{#1}}
+\providecommand{\dodoi}[1]{doi:~\href{http://doi.org/#1}{\nolinkurl{#1}}}
+\providecommand{\doeprint}[1]{\href{http://ascl.net/#1}{\nolinkurl{http://ascl.net/#1}}}
+\providecommand{\doarXiv}[1]{\href{https://arxiv.org/abs/#1}{\nolinkurl{https://arxiv.org/abs/#1}}}
+
+\bibitem[{{Agol} {et~al.}(2015){Agol}, {Jansen}, {Lacy}, {Robinson}, \&
+  {Meadows}}]{agol15}
+{Agol}, E., {Jansen}, T., {Lacy}, B., {Robinson}, T.~D., \& {Meadows}, V. 2015,
+  \apj, 812, 5, \dodoi{10.1088/0004-637X/812/1/5}
+
+\bibitem[{{Heller} {et~al.}(2014){Heller}, {Williams}, {Kipping}, {Limbach},
+  {Turner}, {Greenberg}, {Sasaki}, {Bolmont}, {Grasset}, {Lewis}, {Barnes}, \&
+  {Zuluaga}}]{heller14}
+{Heller}, R., {Williams}, D., {Kipping}, D., {et~al.} 2014, Astrobiology, 14,
+  798, \dodoi{10.1089/ast.2014.1147}
+
+\bibitem[{{Hippke}(2015)}]{hippke15}
+{Hippke}, M. 2015, \apj, 806, 51, \dodoi{10.1088/0004-637X/806/1/51}
+
+\bibitem[{{Horne}(1986)}]{horne86}
+{Horne}, K. 1986, \pasp, 98, 609, \dodoi{10.1086/131801}
+
+\bibitem[{{Kipping}(2009{\natexlab{a}})}]{kipping09a}
+{Kipping}, D.~M. 2009{\natexlab{a}}, \mnras, 392, 181,
+  \dodoi{10.1111/j.1365-2966.2008.13999.x}
+
+\bibitem[{{Kipping}(2009{\natexlab{b}})}]{kipping09b}
+---. 2009{\natexlab{b}}, \mnras, 396, 1797,
+  \dodoi{10.1111/j.1365-2966.2009.14869.x}
+
+\bibitem[{{Kipping} {et~al.}(2013){Kipping}, {Hartman}, {Buchhave}, {Schmitt},
+  {Bakos}, \& {Nesvorn{\'y}}}]{kipping13}
+{Kipping}, D.~M., {Hartman}, J., {Buchhave}, L.~A., {et~al.} 2013, \apj, 770,
+  101, \dodoi{10.1088/0004-637X/770/2/101}
+
+\bibitem[{{Kreidberg} {et~al.}(2014){Kreidberg}, {Bean}, {D{\'e}sert},
+  {Benneke}, {Deming}, {Stevenson}, {Seager}, {Berta-Thompson}, {Seifahrt}, \&
+  {Homeier}}]{kreidberg14a}
+{Kreidberg}, L., {Bean}, J.~L., {D{\'e}sert}, J.-M., {et~al.} 2014, \nat, 505,
+  69, \dodoi{10.1038/nature12888}
+
+\bibitem[{{Noyola} {et~al.}(2014){Noyola}, {Satyal}, \& {Musielak}}]{noyola14}
+{Noyola}, J.~P., {Satyal}, S., \& {Musielak}, Z.~E. 2014, \apj, 791, 25,
+  \dodoi{10.1088/0004-637X/791/1/25}
+
+\bibitem[{{Peters} \& {Turner}(2013)}]{peters13}
+{Peters}, M.~A., \& {Turner}, E.~L. 2013, \apj, 769, 98,
+  \dodoi{10.1088/0004-637X/769/2/98}
+
+\bibitem[{{Sengupta} \& {Marley}(2016)}]{sengupta16}
+{Sengupta}, S., \& {Marley}, M.~S. 2016, \apj, 824, 76,
+  \dodoi{10.3847/0004-637X/824/2/76}
+
+\bibitem[{{Simon} {et~al.}(2010){Simon}, {Szab{\'o}}, {Szatm{\'a}ry}, \&
+  {Kiss}}]{simon10}
+{Simon}, A.~E., {Szab{\'o}}, G.~M., {Szatm{\'a}ry}, K., \& {Kiss}, L.~L. 2010,
+  \mnras, 406, 2038, \dodoi{10.1111/j.1365-2966.2010.16818.x}
+
+\bibitem[{{Vanderburg} {et~al.}(2018){Vanderburg}, {Rappaport}, \&
+  {Mayo}}]{vanderburg18}
+{Vanderburg}, A., {Rappaport}, S.~A., \& {Mayo}, A.~W. 2018, \aj, 156, 184,
+  \dodoi{10.3847/1538-3881/aae0fc}
+
+\end{thebibliography}

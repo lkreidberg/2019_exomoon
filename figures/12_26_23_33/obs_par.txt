@@ -1,0 +1,45 @@
+#parameter			value
+nvisit				1
+norb				26
+GRISM				G141
+FILTER				F130N
+exp_time 			2616.987
+path			 	/Users/lkreidberg/Desktop/Data/Kepler1625
+nexp				232
+toffset                         245500.
+###
+direct_image_diagnostics	False
+direct_image_output		True
+di_rmin				120
+di_rmax				160
+di_cmin 			20	
+di_cmax				50
+###			
+sig_cut				15
+nsmooth				11
+diagnostics		        False	
+output				True
+opt_extract			True
+correct_wave_shift	 	True
+plot_trace			True
+plot_spectrum 			False
+one_di_per_visit		False
+rmin				0
+rmax				256
+cmin			        0	
+cmax				256
+offset				23
+rdnoise				22.0
+window				7
+###				
+BEAMA_i				15
+BEAMA_f				196
+flat				config/WFC3.IR.G141.flat.2.fits
+###		
+lc_type			  	transit
+skip_orbs_phase_curve		0_
+skip_orbs_eclipse		0_
+skip_orbs_transit		0_7_
+###
+ld_file				LD_coefficients/HIP41378_ld_coeffs.dat
+fix_ld				False
