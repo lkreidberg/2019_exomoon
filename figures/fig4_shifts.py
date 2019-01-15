@@ -47,6 +47,7 @@ for i in range(24):
     binf.append(np.mean(xshifts[ind]))
     bint.append(np.mean(t[ind] - np.min(t)))
 #plt.plot(np.array(bint), np.array(binf), 'or')
+plt.ylim(-0.15, 0.15)
 
 plt.ylabel("Spectral shift (pixels)")
 
@@ -60,6 +61,7 @@ for i in range(24):
     binf.append(np.mean(yshifts[ind]))
     bint.append(np.mean(t[ind] - np.min(t)))
 #plt.plot(np.array(bint), np.array(binf), 'or')
+plt.ylim(-0.15, 0.15)
 
 plt.ylabel("Spatial shift (pixels)")
 

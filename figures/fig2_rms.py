@@ -64,7 +64,7 @@ normfactor = stderr[0]
 #normfactor = m.rms_predicted
 plt.loglog(binsz, stderr/normfactor, color='black', ls='-', label='Expected  rms', zorder = -1) # expected noise
 #print(stderr/normfactor)
-plt.loglog(binsz, rms/normfactor*np.sqrt(chi2red), color='orange', label='This work')    # our noise
+plt.loglog(binsz, rms/normfactor*np.sqrt(chi2red), color='blue', label='This work')    # our noise
 
 print("excess over photon, LK:", binsz) 
 print("excess over photon, LK:", rms*np.sqrt(chi2red)/stderr)
@@ -75,7 +75,7 @@ d = d[ind]
 resid = d[:,1]
 rms, stderr, binsz, rmserr = computeRMS(resid, maxnbins = None, binstep = 1, isrmserr = True)
 #normfactor = m.rms_predicted
-plt.loglog(binsz, rms/normfactor*np.sqrt(chi2red), color='blue',  label='TK18')    # our noise
+plt.loglog(binsz, rms/normfactor*np.sqrt(chi2red), color='red',  label='TK18')    # our noise
 
 
 print(rms/normfactor*np.sqrt(chi2red))

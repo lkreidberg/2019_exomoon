@@ -12,6 +12,8 @@
 
 \submitjournal{AJ}
 
+\sloppy
+
 \shorttitle{That's No Moon}
 \shortauthors{Kreidberg et al.}
 
@@ -37,7 +39,7 @@ Moons are abundant in the Solar System, and provide clues to the formation histo
 Recently, a potential exomoon candidate was identified in the Kepler-1625 system \citep{teachey18a}. The host planet, Kepler-1625b, is fairly long-period large world, with a radius consistent with that of Jupiter and an orbital period of 287 days. 
 long period makes it ideal for stability of moon!
 
-It was discovered in the Analysis of the four-year \Kepler\ mission  \citep{teachey18}.
+It was discovered in the Analysis of the four-year \Kepler\ mission  \citep{teachey18b}.
 
 Of the FIXME transits observed by \Kepler\, FIXME what did they show.  
 
@@ -45,27 +47,54 @@ Recently, analysis by FIXME of \Kepler\ observations of FIXME suggested a moon. 
 
 \citep{rodenbeck18} found moon was model dependent
 
-Given the extraordinary nature of this claim, we wished to present a reanalysis. 
+%Given the extraordinary nature of this claim, we wished to present a reanalysis. 
 
-\section{Observations} \label{sec:observations}
-The Kepler-1625 system was observed with 26 continuous \HST\ orbits on 28 - 29 October, 2017 (Program GO 15149: PI: A. Teachey). The observations used Wide Field Camera 3 and the G141 grism.
+\section{Observations and Data Reduction} \label{sec:data}
+The Kepler-1625 system was observed with 26 continuous \HST\ orbits on 28 - 29 October, 2017 (Program GO 15149: PI: A. Teachey). The observations used the Wide Field Camera 3 (WFC3) G141 grism in staring mode, which fixed the spectrum in a constant position on the detector.  At the beginning of the visit, there was a single exposure taken with the F130N filter, which is used to determine the position of the spectral trace. The following exposures used the G141 grism with the \texttt{SPARS25}, \texttt{NSAMP}=15 readout pattern (exposure time of 290.8 seconds; 9 exposures per orbit). For additional description of the observation design, see \cite{teachey18b}.  
 
 
-\section{Data Reduction} \label{sec:reduction}
-We reduced the \HST\ data using custom software developed in \cite{kreidberg14a}. We began the data reduction by fitting the centroid of the direct image with a two-dimensional Gaussian. This centroid determines the location of the spectral trace. We reduced the grism exposures with the optimal extraction routine of \citep{horne86}. The extraction box was centered on the spectral trace and spanned the pixel range ( 
+We reduced the \HST\ data using custom software developed in \cite{kreidberg14a}. We used the \texttt{flt} data product provided by STScI, which is corrected for dark current, bias, and nonlinearity. The \texttt{flt} files are also flatfielded, and cosmic rays are rejected based on a fit to the up-the-ramp samples.  To begin the data reduction, we fit the centroid of the direct image with a two-dimensional Gaussian. The centroid position determines the position of the spectral trace, which we calculated using the coeffients provided in the configuration file from STScI: \texttt{G141.F130N.V4.32.conf}\footnote{available at \url{http://www.stsci.edu/hst/wfc3/analysis/grism_obs/calibrations/wfc3_g141.html}}.  We then created an extraction box centered on the spectral trace. We varied the height and width of the box in 1-pixel increments to find the window that minimized the root-mean-square (rms) deviation from the best fit to the transit light curve. The best was FIXME .
 
-flt
-Remaining exposures: optimal extraction. For the optimal extraction, we estimateda 
+Using this window, we reduced the grism exposures with the optimal extraction routine of \citep{horne86}, which minimizes background noise in the extracted spectrum by weighting pixels that are dominated by the target spectrum more heavily than pixels dominated by the background.  The inputs for the optimal extraction are the background-subtracted data array, the error array (including photon noise read noise, and uncertainty due to background subtraction), an initial guess for the spectrum and its uncertainty, and a mask array for bad pixels.  For the error array, we used a quadrature sum of the photon noise (the square root of the pixel counts), the read noise (12 electrons for \texttt{flt} files, according to the WFC3 data handbook), and the error due to background subtraction (described in \ref{sec:background}).  We initially masked  pixels with the data quality flag 4 or 512 (dead pixels or blobs). For the initial guess of the spectrum and its uncertainty, we did a simple box extraction (sum over all rows in the extraction window), and assumed the variance was equal to the box-extracted spectrum (expected for photon noise limit). See \ref{sec:background} for further detail on background subtraction.
 
-\subsection{Sky Subtraction}
-The star Kepler-1625 is faint (H mag = FIXME) relative to most other exoplanet host stars observed with WFC3, which makes accurate background subtraction especially important for this target. Moreover, the host star is in a crowded field, so the pixels used to estimate the background must be chosen carefully to avoid contamination from other stars.  We identified several uncontaminated regions by eye: $130 < X < 215$ and $6 < Y  < 24$;  $220 < X < 250$ and $110 < X < 155$; $6 < X < 47$ and $127 < Y < 141$, where $X$ and $Y$ are pixel numbers in the spectral and spatial direction, respectively (numbering from zero).  To estimate the background and its uncertainty for each exposure, we took the median and median absolute deviation of the pixel counts in these three regions. 
+In brief, optimal extraction is an iterative procedure with the following steps. First, we create a smoothed image by median-filtering each row of the data with a 9-pixel-wide window.  We then normalize the smoothed image by dividing each column by its sum, and multiply it by the best guess spectrum. We compare the smoothed image to the real data and mask outliers in the data that are greater than a threshold $\sigma_\mathrm{cut}$. We then recompute the best guess spectrum with the new mask and the optimal weights from \cite{horne86}. The process is iterated until no outliers greater than the threshold remain.  This procedure masks any cosmic rays or bad pixels that were missed by the initial \texttt{flt} calibration.  We tested a range of thresholds ($4 < \sigma_\mathrm{cut} < 15$) and found that different $\sigma_\mathrm{cut}$ choices did not significantly change the final transit light curve. The data reported in this work use $\sigma_\mathrm{cut} = 15$. 
 
-\subsection{Measurement of Spectral Drift}
-The position of the spectrum on the detector shifts slightly over time ($\sim0.1$ pixel) due to pointing drift. This drift can significantly change the flux measured for the target star: if the spectrum moves onto less sensitive pixels, fewer photoelectrons will be recorded. To enable a correction for these variations, we measured the position of the spectrum in each exposure. 
 
-We measured position shifts using a similar approach as \cite{deming12}. We used the first exposure in the visit as a template, and interpolated all subsequent spectra to the same wavelength scale as the first. To determine shifts in the spatial direction, we summed the raw image in the spectral direction. We used the first exposure in the visit as a template, and  . For interpolation in the s
+%sky subtraction error - error in mean, plus uncertainty due to extraction box?; uncertainty in mean is very small (0.5 e/pix)
+%interpolation to common wavelength scale (row by row) - take out; NO DIFFERNCE
+%interpolation based on spectral drift - try both; NO DIFFERENCE
+%correct MAD to 1.4826
+%change convolution to 4 pix
+%convolution for spectral drift -
+
+
+\subsection{Background Subtraction} 
+\label{sec:background}
+The star Kepler-1625 is faint (H mag = 14.0) relative to most other exoplanet host stars observed with WFC3, which makes accurate background subtraction especially important for this target. Moreover, the host star is in a crowded field, so the pixels used to estimate the background must be chosen carefully to avoid contamination from other stars.  We identified several uncontaminated regions by eye: $130 < X < 215$ and $6 < Y  < 24$;  $220 < X < 250$ and $110 < X < 155$; $6 < X < 47$ and $127 < Y < 141$, where $X$ and $Y$ are pixel numbers in the spectral and spatial direction, respectively (numbering from zero).  To estimate the background and its uncertainty for each exposure, we took the median and median absolute deviation (MAD) of the pixel counts in these three regions. The per pixel uncertainty due to background subtraction is 1.4826 times the MAD.
+
+\subsection{Pointing Drift Measurement}
+The position of the spectrum on the detector shifts slightly over time ($\sim0.1$ pixel/day) due to the spacecraft's pointing drift. This drift can change the flux measured for the target star: if the spectrum moves onto less sensitive pixels, fewer photoelectrons are recorded. To enable a correction for this effect, we measured the position of the spectrum over time.  To measure shifts in the spatial direction, we first summed each \texttt{flt} image over all columns (which we dub the ``column sum"). We used the first exposure in the visit as a template, and for each subsequent exposure, we used least-squares minimization to calculate the shift in pixels that minimized the difference between its column sum and the template. The shifts are a fraction of a pixel, so we used the NumPy \texttt{interp} routine to do linear interpolation on a sub-pixel scale. The WFC3 point spread function is undersampled, so we convolved each column sum with a 4-pixel-wide Gaussian  before the interpolation \citep[following][]{deming13}.  
+
+To measure the spectral shifts, we repeated this procedure with two differences: (1) we used the optimally extracted spectrum rather than the column sum; and (2) in addition to calculating the best fit shift, we also calculated a best fit normalization factor (a scalar multiple for the whole spectrum), to ensure that our results are not biased by the varying brightness of the host star during the planet's transit. 
+
+Figure\,\ref{fig:shifts} shows the best fit shifts. Over the entire 26-orbit visit, the maximum shift is less than 0.2 pixel in the spatial direction and 0.3 pixel in the spectral direction. The largest shift occurs after orbit 14, when the telescope reacquired the guide stars. 
+
+\begin{figure}
+\includegraphics[width = 0.5 \textwidth]{figures/fig4_shifts.pdf}
+    \caption{Shift (in pixels) relative to the mean position of the spectrum in the spectral direction (top) and spatial direction (bottom). The largest shift occurs after orbit 14 due to a guide star reacquisition.}
+\label{fig:shifts}
+\end{figure}
+
 
 \section{Analysis}
+We fit the light curves with the \texttt{planetplanet} package  
+
+Host star parameters were estimated using the Gaia DR2 parallax \citep{Gaia, GaiaDR2} along with UBV photometry from \citet{Everett2012} and JHK photometry from 2MASS \citep{2MASS}. We employed the isochrone python package \citep{isochrone} with the Dartmouth isochrone grid \citep{Dotter2008} to obtain posterior constraints on the stellar parameters. The resulting parameters indicate that Kepler-1625 has stellar mass $1.37^{+0.13}_{-0.16}$ M$_{\odot}$, radius $1.81^{+0.18}_{-0.16}$ R$_{\odot}$, and age $2.8^{+1.6}_{-1.2}$ Gyr.
+
+
+
+\section{Comparison with Teachey \& Kipping (2018)} 
+
 \begin{figure*}
 \includegraphics[width = 1.0 \textwidth]{figures/fig3_bestfits.pdf}
     \caption{Best fit models compared to transit light curves from this work (left) and from TK18 (right). The top panel shows the best fit no-moon model (blue), and the bottom shows the best fit moon model (red). The lower left of each panel indicates the fit rms (in ppm) and the $\Delta_{\chi_2}$ relative to the overall best fit (data reduction from this work, moon model). The dotted gray line marks the possible moon ingress identified by TK18.}
@@ -74,22 +103,25 @@ We measured position shifts using a similar approach as \cite{deming12}. We used
 
 \begin{figure}
 \includegraphics[width = 0.5 \textwidth]{figures/fig2_rms.pdf}
-    \caption{Light curve rms versus bin size for the best fit no-moon model. The fit to data from this work (orange line) agrees well with the expected photon-limited, $\sqrt{N}$ decrease in rms with bin size (black line). The TK18 rms ranges from $1.3 - 2\times$ the photon limit for bin sizes of 1 to 20 data points. The increase in relative rms for larger bin sizes indicates that time-correlated noise is present in the TK18 data.}
+    \caption{Light curve rms versus bin size for the best fit no-moon model. The fit to data from this work (blue line) agrees well with the expected photon-limited, $\sqrt{N}$ decrease in rms with bin size (black line). The TK18 rms (red line) ranges from $1.3 - 2\times$ the photon limit for bin sizes of 1 to 20 data points. The increase in relative rms for larger bin sizes indicates that time-correlated noise is present in the TK18 data.}
 \label{fig:rms}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width = 0.5 \textwidth]{figures/fig4_shifts.pdf}
-    \caption{ Drifts}
-\label{fig:shifts}
+\includegraphics[width = 0.5 \textwidth]{figures/fig5_pairs.pdf}
+    \caption{Posterior distributions}
+\label{fig:corner}
 \end{figure}
-
 
 \section{Discussion}
 We did not find evidence for the exomoon. Why are we different from Teachey and Kipping?
 
 \acknowledgments
 Alex Teachey, Dan Foreman-Mackey
+
+
+The HST data presented in this paper were obtained from the Mikulski Archive for Space Telescopes (MAST). STScI is operated by the Association of Universities for Research in Astronomy, Inc., under NASA contract NAS5-26555. Support for MAST for non-HST data is provided by the NASA Office of Space Science via grant NNX13AC07G and by other grants and contracts.  We also use data from the European Space Agency (ESA) mission {\it Gaia} (\url{https://www.cosmos.esa.int/gaia}), processed by the {\it Gaia} Data Processing and Analysis Consortium (DPAC, \url{https://www.cosmos.esa.int/web/gaia/dpac/consortium}). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the {\it Gaia} Multilateral Agreement.  We also use data products from the Two Micron All Sky Survey, which is a joint project of the University of Massachusetts and the Infrared Processing and Analysis Center/California Institute of Technology, funded by the National Aeronautics and Space Administration and the National Science Foundation.  This research has made use of the SIMBAD database, operated at CDS, Strasbourg, France; the REBOUND integrator package \citep{reinliu2012rebound}; the NumPy package \citep{van2011numpy}; and NASA's Astrophysics Data System. 
+
 
 \bibliographystyle{aasjournal}
 \bibliography{ms.bib}
