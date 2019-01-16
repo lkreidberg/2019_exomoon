@@ -241,6 +241,12 @@
 {Kipping}, D.~M., {Hartman}, J., {Buchhave}, L.~A., {et~al.} 2013, \apj, 770,
   101, \dodoi{10.1088/0004-637X/770/2/101}
 
+\bibitem[{{Knutson} {et~al.}(2014){Knutson}, {Dragomir}, {Kreidberg},
+  {Kempton}, {McCullough}, {Fortney}, {Bean}, {Gillon}, {Homeier}, \&
+  {Howard}}]{knutson14b}
+{Knutson}, H.~A., {Dragomir}, D., {Kreidberg}, L., {et~al.} 2014, \apj, 794,
+  155, \dodoi{10.1088/0004-637X/794/2/155}
+
 \bibitem[{{Kreidberg} {et~al.}(2014){Kreidberg}, {Bean}, {D{\'e}sert},
   {Benneke}, {Deming}, {Stevenson}, {Seager}, {Berta-Thompson}, {Seifahrt}, \&
   {Homeier}}]{kreidberg14a}
@@ -273,6 +279,14 @@
 {Skrutskie}, M.~F., {Cutri}, R.~M., {Stiening}, R., {et~al.} 2006, \aj, 131,
   1163, \dodoi{10.1086/498708}
 
+\bibitem[{{Spake} {et~al.}(2018){Spake}, {Sing}, {Evans}, {Oklop{\v c}i{\'c}},
+  {Bourrier}, {Kreidberg}, {Rackham}, {Irwin}, {Ehrenreich}, {Wyttenbach},
+  {Wakeford}, {Zhou}, {Chubb}, {Nikolov}, {Goyal}, {Henry}, {Williamson},
+  {Blumenthal}, {Anderson}, {Hellier}, {Charbonneau}, {Udry}, \&
+  {Madhusudhan}}]{spake18}
+{Spake}, J.~J., {Sing}, D.~K., {Evans}, T.~M., {et~al.} 2018, \nat, 557, 68,
+  \dodoi{10.1038/s41586-018-0067-5}
+
 \bibitem[{{Teachey} \& {Kipping}(2018)}]{teachey18b}
 {Teachey}, A., \& {Kipping}, D.~M. 2018, Science Advances, 4, eaav1784,
   \dodoi{10.1126/sciadv.aav1784}
@@ -291,5 +305,9 @@ Van Der~Walt, S., Colbert, S.~C., \& Varoquaux, G. 2011, Computing in Science
   {Mayo}}]{vanderburg18}
 {Vanderburg}, A., {Rappaport}, S.~A., \& {Mayo}, A.~W. 2018, \aj, 156, 184,
   \dodoi{10.3847/1538-3881/aae0fc}
+
+\bibitem[{{Zhou} {et~al.}(2017){Zhou}, {Apai}, {Lew}, \& {Schneider}}]{zhou17}
+{Zhou}, Y., {Apai}, D., {Lew}, B.~W.~P., \& {Schneider}, G. 2017, \aj, 153,
+  243, \dodoi{10.3847/1538-3881/aa6481}
 
 \end{thebibliography}

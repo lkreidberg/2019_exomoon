@@ -7,49 +7,55 @@ Repeated entry---line 76 of file ms.bib.bib
  : @article{heller14
  :                  ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 3905 of file ms.bib.bib
+ : @article{zhou17
+ :                ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "rodenbeck18"
+Warning--I didn't find a database entry for "luger17"
+Warning--I didn't find a database entry for "rein??"
 Warning--I didn't find a database entry for "isochrone"
 Warning--I didn't find a database entry for "reinliu2012rebound"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 22 entries,
+You've used 25 entries,
             3166 wiz_defined-function locations,
-            827 strings with 30563 characters,
-and the built_in function-call counts, 24006 in all, are:
-= -- 810
-> -- 4008
+            850 strings with 31768 characters,
+and the built_in function-call counts, 25655 in all, are:
+= -- 923
+> -- 4179
 < -- 7
-+ -- 1335
-- -- 1356
-* -- 3079
-:= -- 5105
-add.period$ -- 22
-call.type$ -- 22
-change.case$ -- 118
-chr.to.int$ -- 21
-cite$ -- 22
-duplicate$ -- 366
-empty$ -- 590
-format.name$ -- 1382
-if$ -- 4148
++ -- 1391
+- -- 1418
+* -- 3253
+:= -- 5425
+add.period$ -- 25
+call.type$ -- 25
+change.case$ -- 133
+chr.to.int$ -- 24
+cite$ -- 25
+duplicate$ -- 417
+empty$ -- 670
+format.name$ -- 1446
+if$ -- 4466
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 22
-newline$ -- 75
-num.names$ -- 88
-pop$ -- 120
+missing$ -- 25
+newline$ -- 84
+num.names$ -- 100
+pop$ -- 136
 preamble$ -- 2
-purify$ -- 118
+purify$ -- 133
 quote$ -- 0
-skip$ -- 298
+skip$ -- 338
 stack$ -- 0
-substring$ -- 359
+substring$ -- 407
 swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 198
+type$ -- 225
 warning$ -- 0
-while$ -- 82
+while$ -- 92
 width$ -- 0
-write$ -- 249
-(There was 1 error message)
+write$ -- 282
+(There were 2 error messages)
