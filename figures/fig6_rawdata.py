@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 
 
 d = np.genfromtxt("lc_kep1625_kreidberg.txt")
+#d = np.genfromtxt("lc_kep1625_kreidberg_rot_1_16_19.txt")
 ind = np.arange(len(d))                                                
 d = d[(ind!=106)&(ind!=115)&(ind != 0)&(ind!=124)&(ind!=125)] 
 

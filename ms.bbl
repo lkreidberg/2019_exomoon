@@ -18,6 +18,11 @@
 {Deming}, D., {Wilkins}, A., {McCullough}, P., {et~al.} 2013, \apj, 774, 95,
   \dodoi{10.1088/0004-637X/774/2/95}
 
+\bibitem[{{Domingos} {et~al.}(2006){Domingos}, {Winter}, \&
+  {Yokoyama}}]{domingos06}
+{Domingos}, R.~C., {Winter}, O.~C., \& {Yokoyama}, T. 2006, \mnras, 373, 1227,
+  \dodoi{10.1111/j.1365-2966.2006.11104.x}
+
 \bibitem[{{Dotter} {et~al.}(2008){Dotter}, {Chaboyer}, {Jevremovi{\'c}},
   {Kostov}, {Baron}, \& {Ferguson}}]{Dotter2008}
 {Dotter}, A., {Chaboyer}, B., {Jevremovi{\'c}}, D., {et~al.} 2008, \apjs, 178,
@@ -262,12 +267,14 @@
 {Kreidberg}, L., {Bean}, J.~L., {D{\'e}sert}, J.-M., {et~al.} 2014, \nat, 505,
   69, \dodoi{10.1038/nature12888}
 
-\bibitem[{{Kreidberg} {et~al.}(2018){Kreidberg}, {Line}, {Parmentier},
-  {Stevenson}, {Louden}, {Bonnefoy}, {Faherty}, {Henry}, {Williamson},
-  {Stassun}, {Beatty}, {Bean}, {Fortney}, {Showman}, {D{\'e}sert}, \&
-  {Arcangeli}}]{kreidberg18b}
-{Kreidberg}, L., {Line}, M.~R., {Parmentier}, V., {et~al.} 2018, \aj, 156, 17,
-  \dodoi{10.3847/1538-3881/aac3df}
+\bibitem[{{Luger} {et~al.}(2017){Luger}, {Lustig-Yaeger}, \& {Agol}}]{luger17}
+{Luger}, R., {Lustig-Yaeger}, J., \& {Agol}, E. 2017, \apj, 851, 94,
+  \dodoi{10.3847/1538-4357/aa9c43}
+
+\bibitem[{{Morton}(2015)}]{isochrone}
+{Morton}, T.~D. 2015, {isochrones: Stellar model grid package}, Astrophysics
+  Source Code Library.
+\newblock \doeprint{1503.010}
 
 \bibitem[{{Noyola} {et~al.}(2014){Noyola}, {Satyal}, \& {Musielak}}]{noyola14}
 {Noyola}, J.~P., {Satyal}, S., \& {Musielak}, Z.~E. 2014, \apj, 791, 25,
@@ -276,6 +283,10 @@
 \bibitem[{{Peters} \& {Turner}(2013)}]{peters13}
 {Peters}, M.~A., \& {Turner}, E.~L. 2013, \apj, 769, 98,
   \dodoi{10.1088/0004-637X/769/2/98}
+
+\bibitem[{{Rein} \& {Liu}(2012)}]{rein12}
+{Rein}, H., \& {Liu}, S.-F. 2012, \aap, 537, A128,
+  \dodoi{10.1051/0004-6361/201118085}
 
 \bibitem[{{Sengupta} \& {Marley}(2016)}]{sengupta16}
 {Sengupta}, S., \& {Marley}, M.~S. 2016, \apj, 824, 76,
@@ -302,13 +313,6 @@
   {Madhusudhan}}]{spake18}
 {Spake}, J.~J., {Sing}, D.~K., {Evans}, T.~M., {et~al.} 2018, \nat, 557, 68,
   \dodoi{10.1038/s41586-018-0067-5}
-
-\bibitem[{{Stevenson} {et~al.}(2014){Stevenson}, {D{\'e}sert}, {Line}, {Bean},
-  {Fortney}, {Showman}, {Kataria}, {Kreidberg}, {McCullough}, {Henry},
-  {Charbonneau}, {Burrows}, {Seager}, {Madhusudhan}, {Williamson}, \&
-  {Homeier}}]{stevenson14}
-{Stevenson}, K.~B., {D{\'e}sert}, J.-M., {Line}, M.~R., {et~al.} 2014, Science,
-  346, 838, \dodoi{10.1126/science.1256758}
 
 \bibitem[{{Teachey} \& {Kipping}(2018)}]{teachey18b}
 {Teachey}, A., \& {Kipping}, D.~M. 2018, Science Advances, 4, eaav1784,
