@@ -8,11 +8,12 @@ def get_significance(chi2ratio, df1, df2):
 	z = norm.ppf(1.-alpha)
 	return z
 
-err = 379.e-6
+err = 370.e-6
 chi2min = 201.38
 
 #teachey_dir = "teachey_fits/"
-teachey_dir = "teachey_fits_xydecorr/"
+#teachey_dir = "teachey_fits_xydecorr/"
+teachey_dir = "teachey_fits_poly2d_tophat/"
 lk_dir = "lk_fits_new/"
 
 plt.figure(figsize = (8.5,4))
@@ -27,7 +28,7 @@ ax = plt.gca()
 ax.text( 0.03, 0.27,
         #'$\Delta{\chi^2} = $' + '{0:0.1f}'.format(chi2red_rms395 - chi2min)   + '\n'
         '${\chi^2} = $' + '{0:0.1f}'.format(chi2)   + '\n'
-        + 'rms = ' + '{0:0d}'.format(int(rms)), 
+        + 'rms = ' + '{0:0.1f}'.format(rms), 
         verticalalignment='top',horizontalalignment='left',
         transform=ax.transAxes, fontsize = 10
 )
@@ -47,7 +48,7 @@ ax = plt.gca()
 ax.text( 0.03, 0.27,
 #        '$\Delta{\chi^2} = $' + '{0:0.1f}'.format(chi2red_rms395 - chi2min)   + '\n'
         '${\chi^2} = $' + '{0:0.1f}'.format(chi2)   + '\n'
-        + 'rms = ' + '{0:0d}'.format(int(rms)), 
+        + 'rms = ' + '{0:0.1f}'.format(rms), 
         verticalalignment='top',horizontalalignment='left',
         transform=ax.transAxes, fontsize = 10
 )
@@ -74,7 +75,7 @@ ax = plt.gca()
 ax.text( 0.03, 0.27,
         #'$\Delta{\chi^2} = $' + '{0:0.1f}'.format(chi2red_rms395 - chi2min)   + '\n'
         '${\chi^2} = $' + '{0:0.1f}'.format(chi2)   + '\n'
-        + 'rms = ' + '{0:0d}'.format(int(rms)), 
+        + 'rms = ' + '{0:0.1f}'.format(rms), 
         verticalalignment='top',horizontalalignment='left',
         transform=ax.transAxes, fontsize = 10
 )
@@ -94,7 +95,7 @@ ax = plt.gca()
 ax.text( 0.03, 0.27,
         #'$\Delta{\chi^2} = $' + '{0:0.1f}'.format(chi2red_rms395 - chi2min)   + '\n'
         '${\chi^2} = $' + '{0:0.1f}'.format(chi2)   + '\n'
-        + 'rms = ' + '{0:0d}'.format(int(rms)), 
+        + 'rms = ' + '{0:0.1f}'.format(rms), 
         verticalalignment='top',horizontalalignment='left',
         transform=ax.transAxes, fontsize = 10
 )
