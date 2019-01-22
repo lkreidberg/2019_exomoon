@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  21 JAN 2019 17:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  21 JAN 2019 19:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -576,7 +576,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--59
 cuments / handbooks /
  []
 
-<figures/fig4_shifts.pdf, id=87, 289.08pt x 361.35pt>
+<figures/fig4_shifts.pdf, id=88, 289.08pt x 361.35pt>
 File: figures/fig4_shifts.pdf Graphic file (type pdf)
 
 <use figures/fig4_shifts.pdf>
@@ -608,12 +608,12 @@ Overfull \hbox (14.29219pt too wide) in paragraph at lines 146--147
 [][] 
  []
 
-<figures/fig5_pairs.pdf, id=195, 397.485pt x 397.485pt>
+<figures/fig5_pairs.pdf, id=195, 462.52798pt x 346.89601pt>
 File: figures/fig5_pairs.pdf Graphic file (type pdf)
 
 <use figures/fig5_pairs.pdf>
 Package pdftex.def Info: figures/fig5_pairs.pdf used on input line 152.
-(pdftex.def)             Requested size: 256.55872pt x 256.56691pt.
+(pdftex.def)             Requested size: 256.55872pt x 192.42899pt.
 
 Overfull \hbox (14.29219pt too wide) in paragraph at lines 152--153
 [][] 
@@ -640,11 +640,11 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  9485 strings out of 492995
  130428 string characters out of 6132704
- 328685 words of memory out of 5000000
+ 328643 words of memory out of 5000000
  12867 multiletter control sequences out of 15000+600000
  14915 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 35i,7n,37p,7543b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,7n,37p,7543b,555s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
@@ -667,10 +667,10 @@ st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2017/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2017/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on ms.pdf (6 pages, 341838 bytes).
+Output written on ms.pdf (6 pages, 327029 bytes).
 PDF statistics:
- 473 PDF objects out of 1000 (max. 8388607)
- 299 compressed objects within 3 object streams
+ 441 PDF objects out of 1000 (max. 8388607)
+ 295 compressed objects within 3 object streams
  57 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

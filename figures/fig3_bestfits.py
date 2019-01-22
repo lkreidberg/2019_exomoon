@@ -8,7 +8,7 @@ def get_significance(chi2ratio, df1, df2):
 	z = norm.ppf(1.-alpha)
 	return z
 
-err = 370.e-6
+err = 370.e-6*np.sqrt(1.078)
 chi2min = 201.38
 
 #teachey_dir = "teachey_fits/"
@@ -19,7 +19,7 @@ lk_dir = "lk_fits_new/"
 plt.figure(figsize = (8.5,4))
 
 plt.subplot(221)
-plt.title("Data from this work")
+plt.title("This Work")
 phase, data_nosys, norm_resid, t_hr, fit_hr, rms, rms_predicted, chi2, chi2red, chi2red_rms395, dof_nomoon = pickle.load(open(lk_dir + "no_moon.p", "rb"))
 plt.plot(phase, data_nosys, '.w', markeredgecolor = 'k')
 plt.plot(t_hr, fit_hr, color = 'b', label = 'no moon', linewidth = 2.)
@@ -66,7 +66,7 @@ chi2ratio = chi2nu_lk_moon/chi2nu_lk_nomoon
 print("significance", get_significance(chi2ratio, dof_moon, dof_nomoon))
 
 plt.subplot(222)
-plt.title("Data from T&K (2018)")
+plt.title("Teachey & Kipping (2018)")
 phase, data_nosys, norm_resid, t_hr, fit_hr, rms, rms_predicted, chi2, chi2red, chi2red_rms395 = pickle.load(open(teachey_dir + "lsq_teachey_nomoon.p", "rb"))
 plt.plot(phase, data_nosys, '.w', markeredgecolor = 'k')
 plt.plot(t_hr, fit_hr, color = 'r', label = 'no moon', linewidth = 2.)
