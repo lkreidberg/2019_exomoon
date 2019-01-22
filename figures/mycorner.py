@@ -272,12 +272,16 @@ def corner(xs, ys, bins=20, range=None, weights=None, color="k",
             if top_ticks:
                 ax.xaxis.set_ticks_position("top")
                 [l.set_rotation(45) for l in ax.get_xticklabels()]
+                for tick in ax.xaxis.get_major_ticks():
+                    tick.label.set_fontsize(14) 
             else:
                 ax.set_xticklabels([])
         else:
             [l.set_rotation(45) for l in ax.get_xticklabels()]
+            for tick in ax.xaxis.get_major_ticks():
+                tick.label.set_fontsize(14) 
             if labels is not None:
-                ax.set_xlabel(labels[i], **label_kwargs)
+                ax.set_xlabel(labels[i], fontsize = 14, **label_kwargs)
                 ax.xaxis.set_label_coords(0.5, -0.3)
 
             # use MathText for axes ticks
@@ -331,8 +335,10 @@ def corner(xs, ys, bins=20, range=None, weights=None, color="k",
                 ax.set_xticklabels([])
             else:
                 [l.set_rotation(45) for l in ax.get_xticklabels()]
+                for tick in ax.xaxis.get_major_ticks():
+                    tick.label.set_fontsize(14) 
                 if labels is not None:
-                    ax.set_xlabel(labels[j], **label_kwargs)
+                    ax.set_xlabel(labels[j], fontsize= 14, **label_kwargs)
                     ax.xaxis.set_label_coords(0.5, -0.3)
 
                 # use MathText for axes ticks
@@ -343,8 +349,10 @@ def corner(xs, ys, bins=20, range=None, weights=None, color="k",
                 ax.set_yticklabels([])
             else:
                 [l.set_rotation(45) for l in ax.get_yticklabels()]
+                for tick in ax.yaxis.get_major_ticks():
+                    tick.label.set_fontsize(14) 
                 if labels is not None:
-                    ax.set_ylabel(labels[i], **label_kwargs)
+                    ax.set_ylabel(labels[i], fontsize = 14, **label_kwargs)
                     ax.yaxis.set_label_coords(-0.3, 0.5)
 
                 # use MathText for axes ticks

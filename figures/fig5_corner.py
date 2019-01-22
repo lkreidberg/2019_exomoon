@@ -22,4 +22,6 @@ corner.corner(samples_lk, samples_tk, plot_datapoints = False,
             "Moon radius (R$_\oplus$)"]) 
 
 print(quantile(samples_lk[:, 1], [0.95, 0.997]))
+print(quantile(samples_tk[1, :], [0.003, 0.16, 0.5, 0.84]))
+print(quantile(samples_tk[0, :], [0.16, 0.5, 0.84]) + 2458055.)
 plt.savefig('fig5_pairs.pdf')
