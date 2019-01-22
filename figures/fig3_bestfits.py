@@ -8,8 +8,9 @@ def get_significance(chi2ratio, df1, df2):
 	z = norm.ppf(1.-alpha)
 	return z
 
-err = 370.e-6*np.sqrt(1.078)
+err = 362.2e-6
 chi2min = 201.38
+moon_ingress = 0.00191
 
 #teachey_dir = "teachey_fits/"
 #teachey_dir = "teachey_fits_xydecorr/"
@@ -33,7 +34,7 @@ ax.text( 0.03, 0.27,
         transform=ax.transAxes, fontsize = 10
 )
 plt.xlim(-0.0035, 0.0035)
-plt.axvline(0.0016925, linestyle = 'dotted', color = '0.5')
+plt.axvline(moon_ingress, linestyle = 'dotted', color = '0.5')
 plt.gca().set_xticklabels([])
 plt.legend(loc = 'lower right')
 plt.ylabel("Relative flux")
@@ -53,7 +54,7 @@ ax.text( 0.03, 0.27,
         transform=ax.transAxes, fontsize = 10
 )
 plt.xlim(-0.0035, 0.0035)
-plt.axvline(0.0016925, linestyle = 'dotted', color = '0.5')
+plt.axvline(moon_ingress, linestyle = 'dotted', color = '0.5')
 plt.ylabel("Relative flux")
 plt.xlabel("Orbital phase")
 plt.legend(loc = 'lower right')
@@ -81,7 +82,7 @@ ax.text( 0.03, 0.27,
 )
 plt.gca().set_xticklabels([])
 plt.gca().set_yticklabels([])
-plt.axvline(0.0016925, linestyle = 'dotted', color = '0.5')
+plt.axvline(moon_ingress, linestyle = 'dotted', color = '0.5')
 plt.xlim(-0.0035, 0.0035)
 plt.legend(loc = 'lower right')
 
@@ -100,7 +101,7 @@ ax.text( 0.03, 0.27,
         transform=ax.transAxes, fontsize = 10
 )
 plt.gca().set_yticklabels([])
-plt.axvline(0.0016925, linestyle = 'dotted', color = '0.5')
+plt.axvline(moon_ingress, linestyle = 'dotted', color = '0.5')
 plt.xlim(-0.0035, 0.0035)
 plt.xlabel("Orbital phase")
 
