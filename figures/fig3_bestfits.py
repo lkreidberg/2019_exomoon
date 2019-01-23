@@ -25,7 +25,7 @@ plt.figure(figsize = (8.5,4))
 
 plt.subplot(221)
 plt.title("This Work")
-phase, data_nosys, norm_resid, t_hr, fit_hr, rms, rms_predicted, chi2, chi2red, chi2red_rms395, dof_nomoon = pickle.load(open(lk_dir + "no_moon.p", "rb"))
+phase, data_nosys, norm_resid, t_hr, fit_hr, rms, rms_predicted, chi2, chi2red, chi2red_rms395, dof_nomoon = pickle.load(open(lk_dir + "no_moon.p", "rb"), encoding='latin1')
 plt.plot(period*phase - period*np.min(phase), data_nosys, '.w', markeredgecolor = 'k')
 plt.plot(period*(t_hr) - period*np.min(phase), fit_hr, color = 'b', label = 'no moon', linewidth = 2.)
 chi2 = np.sum((norm_resid/err)**2) 
@@ -52,7 +52,7 @@ plt.ylabel("Relative flux")
 chi2nu_lk_nomoon = chi2/dof_nomoon
 
 plt.subplot(223)
-phase, data_nosys, norm_resid, t_hr, fit_hr, rms, rms_predicted, chi2, chi2red, chi2red_rms395, dof_moon = pickle.load(open(lk_dir + "moon.p", "rb"))
+phase, data_nosys, norm_resid, t_hr, fit_hr, rms, rms_predicted, chi2, chi2red, chi2red_rms395, dof_moon = pickle.load(open(lk_dir + "moon.p", "rb"), encoding='latin1')
 plt.plot(period*(phase - np.min(phase)), data_nosys, '.w', markeredgecolor = 'k')
 plt.plot(period*(t_hr - np.min(phase)), fit_hr, color = 'b', label = 'moon', linewidth = 2.)
 chi2 = np.sum((norm_resid/err)**2) 

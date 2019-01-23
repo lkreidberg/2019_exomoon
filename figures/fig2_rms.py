@@ -14,7 +14,7 @@ def computeRMS(data, maxnbins=None, binstep=1, isrmserr=False):
     # bin data into multiple bin sizes
     npts    = data.size
     if maxnbins is None:
-        maxnbins = npts/12.
+        maxnbins = npts/11.
     binsz   = np.arange(1, maxnbins+binstep, step=binstep)
     nbins   = np.zeros(binsz.size)
     rms     = np.zeros(binsz.size)
@@ -68,6 +68,7 @@ plt.loglog(binsz, rms/normfactor*np.sqrt(chi2red), zorder = 10, color='blue', la
 
 print("excess over photon, LK:", binsz) 
 print("excess over photon, LK:", rms*np.sqrt(chi2red)/stderr)
+stderr_LK = np.copy(stderr)
 
 d = np.genfromtxt("kreidberg_moon_resid.txt")                                 
 ind = np.argsort(d[:,0])                                                        
@@ -87,7 +88,7 @@ rms, stderr, binsz, rmserr = computeRMS(resid, maxnbins = None, binstep = 1, isr
 plt.loglog(binsz, rms/normfactor*np.sqrt(chi2red), color='red',  label='TK18, no-moon')    # our noise
 
 
-print(rms/normfactor*np.sqrt(chi2red))
+print("excess over photon, teachey nom:", rms*np.sqrt(chi2red)/stderr_LK)
 
 
 
@@ -99,6 +100,7 @@ rms, stderr, binsz, rmserr = computeRMS(resid, maxnbins = None, binstep = 1, isr
 #normfactor = m.rms_predicted
 plt.loglog(binsz, rms/normfactor*np.sqrt(chi2red), color='red',  linestyle = 'dashed', label='TK18, moon')    # our noise
 
+print("excess over photon, teachey moon:", rms*np.sqrt(chi2red)/stderr_LK)
 
 #plt.xlim(0, binsz[-1]*2)
 plt.xlim(1, 20) 
