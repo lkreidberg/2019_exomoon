@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  22 JAN 2019 23:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  22 JAN 2019 23:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -561,6 +561,74 @@ Overfull \hbox (9.03374pt too wide) in paragraph at lines 39--39
  []
 
 
+Package natbib Warning: Citation `kipping09a' on page 1 undefined on input line
+ 40.
+
+
+Package natbib Warning: Citation `kipping09b' on page 1 undefined on input line
+ 40.
+
+
+Package natbib Warning: Citation `kipping13' on page 1 undefined on input line 
+40.
+
+
+Package natbib Warning: Citation `simon10' on page 1 undefined on input line 40
+.
+
+
+Package natbib Warning: Citation `peters13' on page 1 undefined on input line 4
+0.
+
+
+Package natbib Warning: Citation `heller14' on page 1 undefined on input line 4
+0.
+
+
+Package natbib Warning: Citation `noyola14' on page 1 undefined on input line 4
+0.
+
+
+Package natbib Warning: Citation `hippke15' on page 1 undefined on input line 4
+0.
+
+
+Package natbib Warning: Citation `agol15' on page 1 undefined on input line 40.
+
+
+
+Package natbib Warning: Citation `sengupta16' on page 1 undefined on input line
+ 40.
+
+
+Package natbib Warning: Citation `vanderburg18' on page 1 undefined on input li
+ne 40.
+
+
+Package natbib Warning: Citation `teachey18a' on page 1 undefined on input line
+ 42.
+
+
+Package natbib Warning: Citation `teachey18a' on page 1 undefined on input line
+ 42.
+
+
+Package natbib Warning: Citation `teachey18b' on page 1 undefined on input line
+ 52.
+
+
+Package natbib Warning: Citation `kreidberg14a' on page 1 undefined on input li
+ne 55.
+
+
+Package natbib Warning: Citation `knutson14b' on page 1 undefined on input line
+ 55.
+
+
+Package natbib Warning: Citation `spake18' on page 1 undefined on input line 55
+.
+
+
 Underfull \hbox (badness 1062) in paragraph at lines 57--58
 \OT1/cmr/m/n/10 of the di-rect im-age with a two-dimensional Gaus-
  []
@@ -571,113 +639,207 @@ Underfull \hbox (badness 1342) in paragraph at lines 57--58
  []
 
 [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+Package natbib Warning: Citation `horne86' on page 2 undefined on input line 59
+.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 59--59
 [][]| [] [][][][]$\OT1/cmr/m/n/8 http : / / www . stsci . edu / hst / wfc3 / do
 cuments / handbooks /
  []
 
-<figures/fig4_shifts.pdf, id=88, 289.08pt x 289.08pt>
+
+Package natbib Warning: Citation `horne86' on page 2 undefined on input line 61
+.
+
+<figures/fig4_shifts.pdf, id=36, 289.08pt x 289.08pt>
 File: figures/fig4_shifts.pdf Graphic file (type pdf)
 
 <use figures/fig4_shifts.pdf>
-Package pdftex.def Info: figures/fig4_shifts.pdf used on input line 77.
+Package pdftex.def Info: figures/fig4_shifts.pdf used on input line 81.
 (pdftex.def)             Requested size: 256.55872pt x 256.5702pt.
 
-Overfull \hbox (14.29219pt too wide) in paragraph at lines 77--78
+Overfull \hbox (14.29219pt too wide) in paragraph at lines 81--82
 [][] 
  []
 
+
+Package natbib Warning: Citation `deming13' on page 2 undefined on input line 8
+9.
+
 [2 <./figures/fig4_shifts.pdf>]
-<figures/fig6_rawdata.pdf, id=140, 325.215pt x 325.215pt>
+<figures/fig6_rawdata.pdf, id=84, 325.215pt x 325.215pt>
 File: figures/fig6_rawdata.pdf Graphic file (type pdf)
 
 <use figures/fig6_rawdata.pdf>
-Package pdftex.def Info: figures/fig6_rawdata.pdf used on input line 92.
+Package pdftex.def Info: figures/fig6_rawdata.pdf used on input line 96.
 (pdftex.def)             Requested size: 256.55872pt x 256.57959pt.
 
-Overfull \hbox (14.29219pt too wide) in paragraph at lines 92--93
+Overfull \hbox (14.29219pt too wide) in paragraph at lines 96--97
 [][] 
  []
 
-<figures/fig3_bestfits.pdf, id=150, 614.295pt x 289.08pt>
+
+Package natbib Warning: Citation `luger17' on page 3 undefined on input line 10
+5.
+
+
+Package natbib Warning: Citation `rein12' on page 3 undefined on input line 105
+.
+
+
+Package natbib Warning: Citation `domingos06' on page 3 undefined on input line
+ 107.
+
+
+Package natbib Warning: Citation `teachey18b' on page 3 undefined on input line
+ 109.
+
+<figures/fig3_bestfits.pdf, id=86, 614.295pt x 289.08pt>
 File: figures/fig3_bestfits.pdf Graphic file (type pdf)
 
 <use figures/fig3_bestfits.pdf>
-Package pdftex.def Info: figures/fig3_bestfits.pdf used on input line 108.
+Package pdftex.def Info: figures/fig3_bestfits.pdf used on input line 112.
 (pdftex.def)             Requested size: 513.11743pt x 241.48018pt.
- [3 <./figures/fig6_rawdata.pdf>]
-<figures/fig2_rms.pdf, id=244, 289.08pt x 216.81pt>
+
+
+Package natbib Warning: Citation `espinoza15' on page 3 undefined on input line
+ 119.
+
+
+Package natbib Warning: Citation `Gaia' on page 3 undefined on input line 121.
+
+
+Package natbib Warning: Citation `GaiaDR2' on page 3 undefined on input line 12
+1.
+
+
+Package natbib Warning: Citation `Everett2012' on page 3 undefined on input lin
+e 121.
+
+
+Package natbib Warning: Citation `2MASS' on page 3 undefined on input line 121.
+
+
+
+Package natbib Warning: Citation `isochrone' on page 3 undefined on input line 
+121.
+
+
+Package natbib Warning: Citation `Dotter2008' on page 3 undefined on input line
+ 121.
+
+
+Package natbib Warning: Citation `zhou17' on page 3 undefined on input line 125
+.
+
+
+Package natbib Warning: Citation `teachey18b' on page 3 undefined on input line
+ 127.
+
+[3 <./figures/fig6_rawdata.pdf>]
+
+Package natbib Warning: Citation `foremanmackey13' on page 4 undefined on input
+ line 136.
+
+<figures/fig2_rms.pdf, id=150, 289.08pt x 216.81pt>
 File: figures/fig2_rms.pdf Graphic file (type pdf)
  <use figures/fig2_rms.pdf>
-Package pdftex.def Info: figures/fig2_rms.pdf used on input line 139.
+Package pdftex.def Info: figures/fig2_rms.pdf used on input line 143.
 (pdftex.def)             Requested size: 256.55872pt x 192.42766pt.
 
-Overfull \hbox (14.29219pt too wide) in paragraph at lines 139--140
+Overfull \hbox (14.29219pt too wide) in paragraph at lines 143--144
 [][] 
  []
 
+
+Package natbib Warning: Citation `kass95' on page 4 undefined on input line 148
+.
+
+
+Package natbib Warning: Citation `teachey18b' on page 4 undefined on input line
+ 151.
+
 [4 <./figures/fig3_bestfits.pdf>]
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 145.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 153.
 
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 145.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 153.
 
 
 Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
 
-<figures/fig5_pairs.pdf, id=330, 397.485pt x 397.485pt>
+<figures/fig5_pairs.pdf, id=230, 397.485pt x 397.485pt>
 File: figures/fig5_pairs.pdf Graphic file (type pdf)
 
 <use figures/fig5_pairs.pdf>
-Package pdftex.def Info: figures/fig5_pairs.pdf used on input line 164.
+Package pdftex.def Info: figures/fig5_pairs.pdf used on input line 168.
 (pdftex.def)             Requested size: 256.55872pt x 256.56691pt.
 
-Overfull \hbox (14.29219pt too wide) in paragraph at lines 164--165
+Overfull \hbox (14.29219pt too wide) in paragraph at lines 168--169
 [][] 
  []
+
+
+Package natbib Warning: Citation `teachey18b' on page 5 undefined on input line
+ 182.
+
+
+Package natbib Warning: Citation `rein12' on page 5 undefined on input line 187
+.
+
+
+Package natbib Warning: Citation `van2011numpy' on page 5 undefined on input li
+ne 187.
 
 [5 <./figures/fig2_rms.pdf> <./figures/fig5_pairs.pdf
 
 pdfTeX warning: pdflatex (file ./figures/fig5_pairs.pdf): PDF inclusion: multip
 le pdfs with page group included in a single page
->] (./ms.bbl [6]) [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 185.
+>]
+
+Package natbib Warning: There were undefined citations.
+
+[6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
  (./ms.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 185.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 185.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 193.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 193.
  ) 
 Here is how much of TeX's memory you used:
- 9496 strings out of 492995
- 130631 string characters out of 6132704
- 325671 words of memory out of 5000000
- 12874 multiletter control sequences out of 15000+600000
- 14607 words of font info for 58 fonts, out of 8000000 for 9000
+ 9351 strings out of 492995
+ 128250 string characters out of 6132704
+ 271047 words of memory out of 5000000
+ 12764 multiletter control sequences out of 15000+600000
+ 14915 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 35i,7n,37p,7543b,570s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
-7/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2017/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2017/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2017/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on ms.pdf (7 pages, 349634 bytes).
+ 35i,7n,37p,1341b,366s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2017/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on ms.pdf (6 pages, 345101 bytes).
 PDF statistics:
- 541 PDF objects out of 1000 (max. 8388607)
- 317 compressed objects within 4 object streams
- 61 named destinations out of 1000 (max. 500000)
+ 389 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
