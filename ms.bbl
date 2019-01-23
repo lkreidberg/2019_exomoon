@@ -292,6 +292,11 @@ Kass, R.~E., \& Raftery, A.~E. 1995, Journal of the American Statistical
 {Rein}, H., \& {Liu}, S.-F. 2012, \aap, 537, A128,
   \dodoi{10.1051/0004-6361/201118085}
 
+\bibitem[{{Rodenbeck} {et~al.}(2018){Rodenbeck}, {Heller}, {Hippke}, \&
+  {Gizon}}]{rodenbeck18}
+{Rodenbeck}, K., {Heller}, R., {Hippke}, M., \& {Gizon}, L. 2018, \aap, 617,
+  A49, \dodoi{10.1051/0004-6361/201833085}
+
 \bibitem[{{Sengupta} \& {Marley}(2016)}]{sengupta16}
 {Sengupta}, S., \& {Marley}, M.~S. 2016, \apj, 824, 76,
   \dodoi{10.3847/0004-637X/824/2/76}
@@ -326,11 +331,6 @@ Kass, R.~E., \& Raftery, A.~E. 1995, Journal of the American Statistical
   {Schmitt}}]{teachey18a}
 {Teachey}, A., {Kipping}, D.~M., \& {Schmitt}, A.~R. 2018, \aj, 155, 36,
   \dodoi{10.3847/1538-3881/aa93f2}
-
-\bibitem[{Van Der~Walt {et~al.}(2011)Van Der~Walt, Colbert, \&
-  Varoquaux}]{van2011numpy}
-Van Der~Walt, S., Colbert, S.~C., \& Varoquaux, G. 2011, Computing in Science
-  \& Engineering, 13, 22
 
 \bibitem[{{Vanderburg} {et~al.}(2018){Vanderburg}, {Rappaport}, \&
   {Mayo}}]{vanderburg18}
