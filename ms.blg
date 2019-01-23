@@ -2,79 +2,55 @@ This is BibTeX, Version 0.99d (TeX Live 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: ms.aux
 The style file: aasjournal.bst
-I found no \bibdata command---while reading file ms.aux
-Warning--I didn't find a database entry for "kipping09a"
-Warning--I didn't find a database entry for "kipping09b"
-Warning--I didn't find a database entry for "kipping13"
-Warning--I didn't find a database entry for "simon10"
-Warning--I didn't find a database entry for "peters13"
-Warning--I didn't find a database entry for "heller14"
-Warning--I didn't find a database entry for "noyola14"
-Warning--I didn't find a database entry for "hippke15"
-Warning--I didn't find a database entry for "agol15"
-Warning--I didn't find a database entry for "sengupta16"
-Warning--I didn't find a database entry for "vanderburg18"
-Warning--I didn't find a database entry for "teachey18a"
-Warning--I didn't find a database entry for "teachey18b"
-Warning--I didn't find a database entry for "kreidberg14a"
-Warning--I didn't find a database entry for "knutson14b"
-Warning--I didn't find a database entry for "spake18"
-Warning--I didn't find a database entry for "horne86"
-Warning--I didn't find a database entry for "deming13"
-Warning--I didn't find a database entry for "luger17"
-Warning--I didn't find a database entry for "rein12"
-Warning--I didn't find a database entry for "domingos06"
-Warning--I didn't find a database entry for "espinoza15"
-Warning--I didn't find a database entry for "Gaia"
-Warning--I didn't find a database entry for "GaiaDR2"
-Warning--I didn't find a database entry for "Everett2012"
-Warning--I didn't find a database entry for "2MASS"
-Warning--I didn't find a database entry for "isochrone"
-Warning--I didn't find a database entry for "Dotter2008"
-Warning--I didn't find a database entry for "zhou17"
-Warning--I didn't find a database entry for "foremanmackey13"
-Warning--I didn't find a database entry for "kass95"
-Warning--I didn't find a database entry for "van2011numpy"
+Database file #1: ms.bib.bib
+Repeated entry---line 76 of file ms.bib.bib
+ : @article{heller14
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3905 of file ms.bib.bib
+ : @article{zhou17
+ :                ,
+I'm skipping whatever remains of this entry
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 0 entries,
+You've used 32 entries,
             3166 wiz_defined-function locations,
-            685 strings with 4900 characters,
-and the built_in function-call counts, 28 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 8
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
-int.to.chr$ -- 1
+            897 strings with 32941 characters,
+and the built_in function-call counts, 28522 in all, are:
+= -- 1184
+> -- 4355
+< -- 11
++ -- 1449
+- -- 1479
+* -- 3491
+:= -- 5940
+add.period$ -- 33
+call.type$ -- 32
+change.case$ -- 171
+chr.to.int$ -- 31
+cite$ -- 32
+duplicate$ -- 533
+empty$ -- 860
+format.name$ -- 1522
+if$ -- 5057
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 8
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 1
-purify$ -- 0
+missing$ -- 31
+newline$ -- 106
+num.names$ -- 128
+pop$ -- 176
+preamble$ -- 2
+purify$ -- 171
 quote$ -- 0
-skip$ -- 1
+skip$ -- 435
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 522
+swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 288
 warning$ -- 0
-while$ -- 0
+while$ -- 119
 width$ -- 0
-write$ -- 7
-(There was 1 error message)
+write$ -- 360
+(There were 2 error messages)
