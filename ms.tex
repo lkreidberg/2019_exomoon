@@ -111,6 +111,7 @@ There are two systematic trends in the data. One is the orbit-long ramp, attribu
 
 To fit the orbit-long ramp, we used the non-parametric model from \cite{teachey18b}, which assigns each of the nine exposures per orbit a normalization constant, $c_1, ..., c_9$. To fit the visit-long trend, we used a linear combination of $X$ and $Y$ position (the shift relative to the mean in the spatial and spectral directions, respectively; shown in Figure~\ref{fig:shifts}).  In sum, for exposure number $i$, the systematics model is:
 \begin{equation}
+\label{eq:sys}
 S_i = c_{j}\times(1 + aX_i + bY_i) 
 \end{equation}
 where $a$ and $b$, and $c_j$ are free parameters, and $j = i\Mod9 + 1$ is the exposure number relative to the first exposure in the orbit.
@@ -123,22 +124,26 @@ where $a$ and $b$, and $c_j$ are free parameters, and $j = i\Mod9 + 1$ is the ex
 %where $v$ and $v_2$ are free parameters and $t_i$ is the time elapsed since the first exposure in the visit. 
 
 \subsection{Light Curve Fits}
-We fit the raw, broadband transit light curve using the models described above.  We determined the best fit model parameters with least-squares minimization.  We also ran a Markov chain Monte Carlo (MCMC) fit to determine the posterior probability of each parameters. The MCMC used the \texttt{emcee} package \citep{foremanmackey13} with 50 walkers and ran for $10^4$ steps. We discarded the first 20\% of the MCMC chain as burn-in. As a quick test for convergence, we divided the remainder of the chain in half and checked that the results from the first half were consistent with the second half.
+We fit the raw, broadband transit light curve using the models described above.  We determined the best fit model parameters with least-squares minimization.  We also ran a Markov chain Monte Carlo (MCMC) fit to determine the posterior probability of each parameters. The MCMC used the \texttt{emcee} package \citep{foremanmackey13} with 50 walkers and ran for 5000 steps. We discarded the first 20\% of the MCMC chain as burn-in. As a quick test for convergence, we divided the remainder of the chain in half and confirmed that the results from the first half were consistent with the second half.
 
-%\begin{enumerate}
-%\item{No moon, non-parametric ramp, X-Y decorrelation} 
-%\item{Moon, non-parametric ramp, X-Y decorrelation} 
-%\item{No moon, non-parametric ramp, X-Y decorrelation, visit-long polynomial} 
-%\item{Moon, non-parametric ramp, X-Y decorrelation, visit-long polynomial} 
-%\end{enumerate}
 
 
 \section{Results}
-Figure FIXME shows the best fits.
+We obtained an excellent fit to the light curve with the no-moon model, as illustrated in  Figure\,\ref{fig:bestfit}. The residuals to our no-moon model fit have rms equal to 362.2 parts per million (ppm), which is within 2\% of the predicted photon shot noise (367 ppm), and yields a $\chi_\nu^2 = 1.05$. The binned rms decreases with the square root of the number of points per bin, as expected for photon noise-limited statistics (see rms versus bin size in Figure~\ref{fig:rms}).
+
+We also obtained a good fit with the moon model; however, the addition of three more free parameters does not significantly improve the fit quality. The best fit moon model has a radius $r_\mathrm{moon} = 2.4R_\oplus$, a mid-transit time $t_\mathrm{moon} = 2458055.2869\,\mathrm{BJD_{TDB}}$, and a period $P_m = 26.5$ days. This fit has a slightly lower rms than the no-moon model (359.5 ppm versus 362.2 ppm), but the $\chi_\nu^2$ is unchanged (also $1.05$). According to the Bayesian information criterion \citep[BIC;][]{kass95}, the moon model is disfavored with $\Delta\mathrm{BIC} = 13$, which constitutes strong evidence against the inclusion of a moon.  In addition, the moon transit time is not well-constrained by the data. As shown in the posterior distribution in Figure~\ref{fig:corner}, the $2\,\sigma$ confidence interval for the moon's transit includes the entire visit.  The upper limit on the moon radius is $3.2\,R_\oplus$ at $2\sigma$ confidence and $4.0\,R_\oplus$ at $3\sigma$.
+
+\subsection{Comparison with Teachey \& Kipping (2018)}
+For comparison, we also fit the raw TK18 data using the no-moon and moon models (best fits shown in Figure\,\ref{fig:bestfit}).  We tested the same detrending model described above (decorrelation with the spectrum's $X$ and $Y$ position), but found that it did not perform as well as the systematics models presented in TK18 (10\% higher rms and time-correlated residuals).  We therefore opted to use a TK18 systematics model to enable a fair comparison between our results. We used a second-order polynomial trend in time, a constant offset after orbit 14 (where the guide stars are reacquired), and the non-parameteric orbit-long ramp model. This model has one more free parameter than the systematics model given in Equation~\ref{eq:sys}.
+
+Our results are consistent with those presented in TK18, including the large improvement in $\chi^2$ when the moon is included ($\Delta\chi^2 = 22.0$). The posterior distribution for the moon radius is $r_\mathrm{moon} = 4.0^{+0.8}_{-0.6}\,R_\oplus$ ($>2.1\,R_\oplus$ at $3\sigma$ confidence), and the moon transit time is centered on $t_\mathrm{moon} =  2458056.29^{+0.06}_{-0.04}\,\mathrm{BJD_{TDB}}$ (as shown in Figure\,\ref{fig:corner}).
+
+Compared to fits to our data, the fits to the TK18 data have a larger rms. Notably, the moon model fit to the TK18 data has a larger rms than the no-moon fit to our data (363.4 versus 362.2 ppm), even though it has four additional free parameters. This difference in fit quality corresponds to $\Delta\mathrm{BIC} = 23.9$, which is strong evidence against the moon model.  We obtain a better fit (a lower $\chi^2$) with the no-moon model fit to our data than we obtain with the moon model fit to the TK18 data, even though it has four additional free parameters.
+
 
 \begin{figure*}
 \includegraphics[width = 1.0 \textwidth]{figures/fig3_bestfits.pdf}
-    \caption{Best fit models compared to transit light curves from this work (left) and from TK18 (right). The top panel shows the best fit no-moon model (blue), and the bottom shows the best fit moon model (red). The lower left of each panel indicates the fit rms (in ppm) and the $\Delta_{\chi_2}$ relative to the overall best fit (data reduction from this work, moon model). The dotted gray line marks the possible moon ingress identified by TK18.}
+    \caption{Best fit models compared to transit light curves from this work (left) and from TK18 (right). The top panel shows the best fit no-moon model (blue), and the bottom shows the best fit moon model (red). The lower left of each panel indicates the fit rms (in ppm), the ${\chi_2}$, the degrees of freedom, and the change in GIC relative to the lowest value. The dotted gray line marks the possible moon ingress identified by TK18.}
 \label{fig:bestfit}
 \end{figure*}
 
@@ -154,8 +159,17 @@ Figure FIXME shows the best fits.
 \label{fig:corner}
 \end{figure}
 
-\section{Comparison with Teachey \& Kipping 2018}
-For comparison, we also fit the raw light curve from \cite{teachey18b}.  
+
+\begin{figure}
+\includegraphics[width = 0.5 \textwidth]{figures/fig6_rawdata.pdf}
+    \caption{Comparison of raw data.}
+\label{fig:raw}
+\end{figure}
+
+\section{Discussion and Conclusion}
+We found
+approach to data reduction was very similar, but of the data reduction, and 
+
 
 \acknowledgments
 Dan Foreman-Mackey

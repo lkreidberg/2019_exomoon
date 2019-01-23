@@ -242,6 +242,10 @@
 \bibitem[{{Horne}(1986)}]{horne86}
 {Horne}, K. 1986, \pasp, 98, 609, \dodoi{10.1086/131801}
 
+\bibitem[{Kass \& Raftery(1995)}]{kass95}
+Kass, R.~E., \& Raftery, A.~E. 1995, Journal of the American Statistical
+  Association, 90, 773, \dodoi{10.1080/01621459.1995.10476572}
+
 \bibitem[{{Kipping}(2009{\natexlab{a}})}]{kipping09a}
 {Kipping}, D.~M. 2009{\natexlab{a}}, \mnras, 392, 181,
   \dodoi{10.1111/j.1365-2966.2008.13999.x}
