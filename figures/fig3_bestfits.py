@@ -12,7 +12,7 @@ def get_significance(chi2ratio, df1, df2):
 err = 367.e-6
 chi2min = 201.38
 #moon_ingress = 0.00191
-moon_ingress = 1.3
+moon_ingress = 1.25
 period = 287.378949 
 xmin, xmax = -0.3, 1.7
 
@@ -35,7 +35,7 @@ nfreepar = 219 - dof_nomoon
 BIC_LK_nomoon = chi2 + nfreepar*np.log(npoints)
 BIC = chi2 + nfreepar*np.log(npoints)
 ax = plt.gca()
-ax.text( 0.03, 0.51,
+ax.text( 0.03, 0.52,
         '$\mathrm{rms} =$' + '{0:0.1f}'.format(rms) + '\n' 
         + '${\chi^2} = $' + '{0:0.1f}'.format(chi2) + '\n'
         + '$\mathrm{dof} =$' + '{0:0d}'.format(int(dof_nomoon)) + '\n'
@@ -59,7 +59,7 @@ chi2 = np.sum((norm_resid/err)**2)
 nfreepar = 219 - dof_moon
 BIC = chi2 + nfreepar*np.log(npoints)
 ax = plt.gca()
-ax.text( 0.03, 0.51,
+ax.text( 0.03, 0.52,
         '$\mathrm{rms} =$' + '{0:0.1f}'.format(rms) + '\n' 
         + '${\chi^2} = $' + '{0:0.1f}'.format(chi2) + '\n'
         + '$\mathrm{dof} =$' + '{0:0d}'.format(int(dof_moon)) + '\n'
@@ -91,7 +91,7 @@ dof_nomoon = 203
 nfreepar = 219 - dof_nomoon
 BIC = chi2 + nfreepar*np.log(npoints)
 ax = plt.gca()
-ax.text( 0.03, 0.51,                                                            
+ax.text( 0.03, 0.52,                                                            
         '$\mathrm{rms} =$' + '{0:0.1f}'.format(rms) + '\n'                      
         + '${\chi^2} = $' + '{0:0.1f}'.format(chi2) + '\n'                      
         + '$\mathrm{dof} =$' + '{0:0d}'.format(int(dof_nomoon)) + '\n'            
@@ -116,7 +116,7 @@ dof_moon = 200
 nfreepar = 219 - dof_moon                                                     
 BIC = chi2 + nfreepar*np.log(npoints)  
 ax = plt.gca()
-ax.text( 0.03, 0.51,                                                            
+ax.text( 0.03, 0.52,                                                            
         '$\mathrm{rms} =$' + '{0:0.1f}'.format(rms) + '\n'                      
         + '${\chi^2} = $' + '{0:0.1f}'.format(chi2) + '\n'                      
         + '$\mathrm{dof} =$' + '{0:0d}'.format(int(dof_moon)) + '\n'            

@@ -36,7 +36,7 @@ sys = 1. + a*xshifts + b*yshifts
 
 f /= sys
 
-plt.figure(figsize = (4,5))
+plt.figure(figsize = (4,4))
 
 plt.subplot(211)
 plt.plot(t - np.min(t), xshifts, '.k', alpha = 0.5, label = "spectral")

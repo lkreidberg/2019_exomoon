@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-moon_ingress = 1.3
+moon_ingress = 1.25
 
 d = np.genfromtxt("lc_kep1625_kreidberg.txt")
 #d = np.genfromtxt("lc_kep1625_kreidberg_rot_1_16_19.txt")
