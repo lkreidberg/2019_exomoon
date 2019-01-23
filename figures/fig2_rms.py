@@ -51,9 +51,9 @@ def computeStdErr(datastd, datasize, binsz):
 
 
 
-plt.figure(figsize = (4,3))
+plt.figure(figsize = (4,3.5))
 
-chi2red = 1.33   #best fit chi2 (need to scale for photon noise)
+chi2red = 1.05   #best fit chi2 (need to scale for photon noise)
 
 d = np.genfromtxt("kreidberg_nomoon_resid.txt")
 ind = np.argsort(d[:,0])
@@ -64,10 +64,19 @@ normfactor = stderr[0]
 #normfactor = m.rms_predicted
 plt.loglog(binsz, stderr/normfactor, color='black', ls='-', label='Expected  rms', zorder = -1) # expected noise
 #print(stderr/normfactor)
-plt.loglog(binsz, rms/normfactor*np.sqrt(chi2red), color='blue', label='This work')    # our noise
+plt.loglog(binsz, rms/normfactor*np.sqrt(chi2red), zorder = 10, color='blue', label='This work, no-moon')    # our noise
 
 print("excess over photon, LK:", binsz) 
 print("excess over photon, LK:", rms*np.sqrt(chi2red)/stderr)
+
+d = np.genfromtxt("kreidberg_moon_resid.txt")                                 
+ind = np.argsort(d[:,0])                                                        
+d = d[ind]                                                                      
+resid = d[:,1]                                                                  
+rms, stderr, binsz, rmserr = computeRMS(resid, maxnbins = None, binstep = 1, isrmserr = True)
+normfactor = stderr[0]                                                          
+plt.loglog(binsz, rms/normfactor*np.sqrt(chi2red), color='blue', linestyle = 'dashed', label='This work, moon')    # our noise
+
 
 d = np.genfromtxt("teachey_nomoon_resid.txt")
 ind = np.argsort(d[:,0])
@@ -75,13 +84,20 @@ d = d[ind]
 resid = d[:,1]
 rms, stderr, binsz, rmserr = computeRMS(resid, maxnbins = None, binstep = 1, isrmserr = True)
 #normfactor = m.rms_predicted
-plt.loglog(binsz, rms/normfactor*np.sqrt(chi2red), color='red',  label='TK18')    # our noise
+plt.loglog(binsz, rms/normfactor*np.sqrt(chi2red), color='red',  label='TK18, no-moon')    # our noise
 
 
 print(rms/normfactor*np.sqrt(chi2red))
 
 
-#plt.axhline(m.rms_predicted/normfactor, linestyle = 'dashed')
+
+d = np.genfromtxt("teachey_moon_resid.txt")
+ind = np.argsort(d[:,0])
+d = d[ind]
+resid = d[:,1]
+rms, stderr, binsz, rmserr = computeRMS(resid, maxnbins = None, binstep = 1, isrmserr = True)
+#normfactor = m.rms_predicted
+plt.loglog(binsz, rms/normfactor*np.sqrt(chi2red), color='red',  linestyle = 'dashed', label='TK18, moon')    # our noise
 
 
 #plt.xlim(0, binsz[-1]*2)
@@ -90,7 +106,7 @@ plt.ylim(stderr[-1]/normfactor/2., 1.3)
 
 plt.xlabel("Data points per bin")
 plt.ylabel("Normalized RMS") 
-plt.legend(loc = 'lower left')
+plt.legend(loc = 'lower left', fontsize = 10)
 
 plt.gca().set_xticks([1, 10])
 plt.gca().set_xticklabels([1, 10])
