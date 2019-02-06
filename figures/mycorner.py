@@ -212,9 +212,9 @@ def corner(xs, ys, bins=20, range=None, weights=None, color="k",
         # Plot the histograms.
         #n, _, _ = ax.hist(x, bins=bins[i], weights=weights,
          #                 range=np.sort(range[i]), **hist_kwargs)
-        n, _, _ = ax.hist(x, color = 'b', density = True, histtype = 'step')
+        n, _, _ = ax.hist(x, color = 'b', normed = True, histtype = 'step')
 
-        n, _, _ = ax.hist(y1, color = 'r',  density = True, histtype = 'step') 
+        n, _, _ = ax.hist(y1, color = 'r',  normed = True, histtype = 'step') 
 
         if truths is not None and truths[i] is not None:
             ax.axvline(truths[i], color=truth_color)
