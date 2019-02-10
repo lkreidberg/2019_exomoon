@@ -5,13 +5,13 @@ import matplotlib.pyplot as plt
 def quantile(x, q): return np.percentile(x, [100. * qi for qi in q])
 
 
-chain = np.load("mcmc_output/mcmc_LK_full.npy")
+chain = np.load("mcmc_output/mcmc_LK_6par.npy")
 ndim = chain.shape[-1]
-samples_lk = chain[:, 5000:10000, :].reshape((-1, ndim))
+samples_lk = chain[:, 2000:10000, :].reshape((-1, ndim))
 
-chain = np.load("mcmc_output/mcmc_TK18_full.npy")
+chain = np.load("mcmc_output/mcmc_TK18_6par.npy")
 ndim = chain.shape[-1]
-samples_tk = chain[:, 5000:10000, :].reshape((-1, ndim))
+samples_tk = chain[:, 2000:10000, :].reshape((-1, ndim))
 
 samples_lk = samples_lk[:,[6,8]]
 #samples_lk[:,1] = samples[

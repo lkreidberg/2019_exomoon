@@ -280,6 +280,10 @@ Kass, R.~E., \& Raftery, A.~E. 1995, Journal of the American Statistical
   Source Code Library.
 \newblock \doeprint{1503.010}
 
+\bibitem[{{Ning} {et~al.}(2018){Ning}, {Wolfgang}, \& {Ghosh}}]{ning18}
+{Ning}, B., {Wolfgang}, A., \& {Ghosh}, S. 2018, \apj, 869, 5,
+  \dodoi{10.3847/1538-4357/aaeb31}
+
 \bibitem[{{Noyola} {et~al.}(2014){Noyola}, {Satyal}, \& {Musielak}}]{noyola14}
 {Noyola}, J.~P., {Satyal}, S., \& {Musielak}, Z.~E. 2014, \apj, 791, 25,
   \dodoi{10.1088/0004-637X/791/1/25}

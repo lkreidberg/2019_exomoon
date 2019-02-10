@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  5 FEB 2019 22:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  9 FEB 2019 11:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -557,114 +557,113 @@ Overfull \hbox (9.03374pt too wide) in paragraph at lines 42--42
  []
 
 [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 1062) in paragraph at lines 62--63
+Underfull \hbox (badness 1062) in paragraph at lines 64--65
 \OT1/cmr/m/n/10 of the di-rect im-age with a two-dimensional Gaus-
  []
 
 
-Underfull \hbox (badness 1342) in paragraph at lines 62--63
+Underfull \hbox (badness 1342) in paragraph at lines 64--65
 \OT1/cmr/m/n/10 sian. The cen-troid po-si-tion de-ter-mines the po-si-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--64
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
 [][]| [] [][][][]$\OT1/cmr/m/n/8 http : / / www . stsci . edu / hst / wfc3 / do
 cuments / handbooks /
  []
 
-<figures/fig4_shifts.pdf, id=92, 289.08pt x 289.08pt>
+<figures/fig4_shifts.pdf, id=89, 289.08pt x 289.08pt>
 File: figures/fig4_shifts.pdf Graphic file (type pdf)
 
 <use figures/fig4_shifts.pdf>
-Package pdftex.def Info: figures/fig4_shifts.pdf used on input line 86.
+Package pdftex.def Info: figures/fig4_shifts.pdf used on input line 89.
 (pdftex.def)             Requested size: 256.55872pt x 256.5702pt.
 
-Overfull \hbox (14.29219pt too wide) in paragraph at lines 86--87
+Overfull \hbox (14.29219pt too wide) in paragraph at lines 89--90
 [][] 
  []
 
-[2]
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 95.
-
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 95.
-
-
-Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
-
-<figures/fig6_rawdata.pdf, id=109, 325.215pt x 325.215pt>
+[2 <./figures/fig4_shifts.pdf>]
+<figures/fig6_rawdata.pdf, id=143, 325.215pt x 325.215pt>
 File: figures/fig6_rawdata.pdf Graphic file (type pdf)
 
 <use figures/fig6_rawdata.pdf>
-Package pdftex.def Info: figures/fig6_rawdata.pdf used on input line 101.
+Package pdftex.def Info: figures/fig6_rawdata.pdf used on input line 104.
 (pdftex.def)             Requested size: 256.55872pt x 256.57959pt.
 
-Overfull \hbox (14.29219pt too wide) in paragraph at lines 101--102
+Overfull \hbox (14.29219pt too wide) in paragraph at lines 104--105
 [][] 
  []
 
-[3 <./figures/fig4_shifts.pdf> <./figures/fig6_rawdata.pdf
-
-pdfTeX warning: pdflatex (file ./figures/fig6_rawdata.pdf): PDF inclusion: mult
-iple pdfs with page group included in a single page
->] <figures/fig3_bestfits.pdf, id=216, 614.295pt x 289.08pt>
+<figures/fig3_bestfits.pdf, id=153, 614.295pt x 289.08pt>
 File: figures/fig3_bestfits.pdf Graphic file (type pdf)
 
 <use figures/fig3_bestfits.pdf>
-Package pdftex.def Info: figures/fig3_bestfits.pdf used on input line 117.
+Package pdftex.def Info: figures/fig3_bestfits.pdf used on input line 122.
 (pdftex.def)             Requested size: 513.11743pt x 241.48018pt.
-
-<figures/fig2_rms.pdf, id=239, 289.08pt x 252.945pt>
+ [3 <./figures/fig6_rawdata.pdf>]
+<figures/fig2_rms.pdf, id=242, 289.08pt x 252.945pt>
 File: figures/fig2_rms.pdf Graphic file (type pdf)
 
 <use figures/fig2_rms.pdf>
-Package pdftex.def Info: figures/fig2_rms.pdf used on input line 148.
+Package pdftex.def Info: figures/fig2_rms.pdf used on input line 153.
 (pdftex.def)             Requested size: 256.55872pt x 224.49893pt.
 
-Overfull \hbox (14.29219pt too wide) in paragraph at lines 148--149
+Overfull \hbox (14.29219pt too wide) in paragraph at lines 153--154
 [][] 
  []
 
-[4] <figures/fig5_pairs.pdf, id=275, 397.485pt x 397.485pt>
-File: figures/fig5_pairs.pdf Graphic file (type pdf)
+[4 <./figures/fig3_bestfits.pdf>]
 
-<use figures/fig5_pairs.pdf>
-Package pdftex.def Info: figures/fig5_pairs.pdf used on input line 168.
-(pdftex.def)             Requested size: 256.55872pt x 256.56691pt.
-
-Overfull \hbox (14.29219pt too wide) in paragraph at lines 168--169
-[][] 
- []
-
-[5 <./figures/fig3_bestfits.pdf> <./figures/fig2_rms.pdf
-
-pdfTeX warning: pdflatex (file ./figures/fig2_rms.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
->]
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 177.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 159.
 
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 177.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 159.
 
 
 Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
 
+<figures/fig5_pairs.pdf, id=329, 397.485pt x 397.485pt>
+File: figures/fig5_pairs.pdf Graphic file (type pdf)
+
+<use figures/fig5_pairs.pdf>
+Package pdftex.def Info: figures/fig5_pairs.pdf used on input line 177.
+(pdftex.def)             Requested size: 256.55872pt x 256.56691pt.
+
+Overfull \hbox (14.29219pt too wide) in paragraph at lines 177--178
+[][] 
+ []
+
+[5 <./figures/fig2_rms.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 188.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 188.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 202--204
+\OT1/cmr/m/n/10 cessed by the \OT1/cmr/m/it/10 Gaia \OT1/cmr/m/n/10 Data Pro-ce
+ss-ing and Anal-y-sis
+ []
+
 (./ms.bbl [6 <./figures/fig5_pairs.pdf>]) [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 200.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 209.
  (./ms.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 200.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 200.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 209.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 209.
  ) 
 Here is how much of TeX's memory you used:
- 9497 strings out of 492995
- 130638 string characters out of 6132704
- 343245 words of memory out of 5000000
- 12874 multiletter control sequences out of 15000+600000
+ 9502 strings out of 492995
+ 130701 string characters out of 6132704
+ 340825 words of memory out of 5000000
+ 12878 multiletter control sequences out of 15000+600000
  14607 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 35i,7n,37p,7543b,492s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,7n,37p,7543b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
 usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></
@@ -684,10 +683,10 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on ms.pdf (7 pages, 354182 bytes).
+Output written on ms.pdf (7 pages, 351415 bytes).
 PDF statistics:
- 546 PDF objects out of 1000 (max. 8388607)
- 320 compressed objects within 4 object streams
- 62 named destinations out of 1000 (max. 500000)
+ 540 PDF objects out of 1000 (max. 8388607)
+ 315 compressed objects within 4 object streams
+ 63 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
