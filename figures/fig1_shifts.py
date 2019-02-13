@@ -69,5 +69,5 @@ plt.xlabel("Time from first exposure (days)")
 
 
 plt.tight_layout()
-plt.savefig('fig4_shifts.pdf')
+plt.savefig('fig1_shifts.pdf')
 #plt.show()

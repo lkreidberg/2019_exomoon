@@ -56,4 +56,4 @@ for i in range(orb):
 #plt.plot(t_mean, diff_mean, 'or')
 
 plt.tight_layout()
-plt.savefig("fig6_rawdata.pdf")
+plt.savefig("fig2_rawdata.pdf")

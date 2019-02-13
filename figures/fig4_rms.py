@@ -119,4 +119,4 @@ plt.gca().tick_params(axis='both', which='major', pad=2)
 
 plt.tight_layout()
 #plt.show()
-plt.savefig("fig2_rms.pdf")
+plt.savefig("fig4_rms.pdf")
