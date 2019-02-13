@@ -19,6 +19,7 @@ npoints = 219   #number of data points
 #teachey_dir = "teachey_fits_poly2d_tophat/"
 teachey_dir = "teachey_fits_full/"
 lk_dir = "lk_fits_full/"
+#lk_dir = "lk_fits_quad/"
 
 plt.figure(figsize = (8.5,4))
 

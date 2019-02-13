@@ -33,8 +33,7 @@
 \affiliation{Flatiron Institute, Simons Foundation, 162 Fifth Ave, New York, NY 10010, USA}
 
 \begin{abstract}
-    Observations of the Kepler-1625 system with the Kepler and Hubble Space Telescopes have suggested the presence of a candidate exomoon, Kepler-1625b I, a Neptune-radius satellite orbiting a long-period Jovian planet. Here we present a new analysis of the Hubble observations, using an independent data reduction pipeline. We find that the transit light curve is well fit with a planet-only model, with a best-fit $\chi^2_\nu$ equal to $1.01$. The addition of a moon does not significantly improve the fit quality. We compare our results directly with the original light curve from \cite{teachey18b}, and find that we obtain a better fit to the data using a model with fewer free parameters (no moon). We conclude that the evidence for the transit of Kepler-1625b I hinges on subtleties of the data reduction, and we therefore suggest that future follow-up efforts for exomoons should prioritize alternate targets.
-
+    Observations of the Kepler-1625 system with the Kepler and Hubble Space Telescopes have suggested the presence of a candidate exomoon, Kepler-1625b I, a Neptune-radius satellite orbiting a long-period Jovian planet. Here we present a new analysis of the Hubble observations, using an independent data reduction pipeline. We find that the transit light curve is well fit with a planet-only model, with a best-fit $\chi^2_\nu$ equal to $1.01$. The addition of a moon does not significantly improve the fit quality. We compare our results directly with the original light curve from \cite{teachey18b}, and find that we obtain a better fit to the data using a model with fewer free parameters (no moon).  We discuss possible sources for the discrepancy in our results, and conclude that the lunar transit signal found by \cite{teachey18b} was likely an artifact of the data reduction. 
 \end{abstract}
 
 \keywords{planets and satellites: individual (Kepler-1625b I)}
@@ -132,14 +131,17 @@ We estimated the host star parameters using the Gaia DR2 parallax \citep{Gaia, G
 
 
 \subsection{Instrument Systematics Model}
+\label{sec:sys}
 There are two systematic trends in the data. One is the orbit-long ramp, attributed to charge traps in the detector filling up over the orbit \citep{zhou17}. The other is a visit-long trend over multiple orbits, which could be due to shifts in the target star position onto more/less sensitive pixels.
 
-To fit the orbit-long ramp, we used the non-parametric model from TK18, which assigns each of the nine exposures per orbit a normalization constant, $c_1, ..., c_9$. To fit the visit-long trend, we used a linear combination of X and Y position (the shift relative to the mean in the spatial and spectral directions; shown in Figure~\ref{fig:shifts}).  In sum, for exposure number $i$, the systematics model S is:
+For our primary fit, we used a linear combination of the spectrum's X and Y position (shown in Figure~\ref{fig:shifts}), multiplied by the non-parametric orbital ramp model from TK18, which assigns each of the nine exposures per orbit a normalization constant, $c_1, ..., c_9$. In sum, for exposure number $i$, the systematics model S is:
 \begin{equation}
 \label{eq:sys}
     \mathrm{S}_i = c_{j}\times(1 + a\mathrm{X}_i + b\mathrm{Y}_i) 
 \end{equation}
-where $a$ and $b$, and $c_j$ are free parameters, and $j = i\Mod9 + 1$ is the exposure number relative to the first exposure in the orbit.
+where $a$ and $b$, and $c_j$ are free parameters, and $j = i\Mod9 + 1$ is the exposure number relative to the first exposure in the orbit. 
+
+For comparison, we also tested the ``exponential" systematics model from TK18, which combines an exponential visit-long trend, an offset after orbit 14 when the guide stars were reacquired, and the non-parametric orbital ramp model.
 
 
 \subsection{Light Curve Fits}
@@ -159,11 +161,12 @@ We obtained a slightly lower rms with the moon model (351 ppm); however, this is
 
 %The best fit moon model has a radius $r_\mathrm{moon} = 2.4R_\oplus$, a mid-transit time $t_\mathrm{moon} = 2458055.2869\,\mathrm{BJD_{TDB}}$, and a period $P_m = 26.5$ days. This fit has a slightly lower rms than the no-moon model (359.5 ppm versus 362.2 ppm), but 
 
+We found that our results were unchanged when we used the exponential systematics model from TK18 (described in \S\,\ref{sec:sys}). For this case, the moon model is also strongly disfavored ($\Delta\rm{BIC} = 32.2$). The fit rms is within 5 ppm of the XY decorrelation model. 
 
 \subsection{Comparison with Teachey \& Kipping (2018)}
-TK18 found evidence for the transit of a Neptune-size moon in their analysis of the HST data, in contrast to the findings presented here.  To make a direct comparison with their results, we fit the TK18 light curve directly. 
+TK18 found evidence for the transit of a Neptune-size moon in their analysis of the HST data, in contrast to the findings presented here.  To make a direct comparison with their results, we fit the TK18 light curve directly.  We fit the astrophysical signal with both the no-moon and models, and used the exponential systematics model.  Figure\,\ref{fig:bestfit} shows the best fit models. 
 
-We fit the data with both the no-moon and models.  For the systematics, we tested the XY decorrelation model described above, but found that it did not perform as well as the systematics models presented in TK18 (10\% higher rms and time-correlated residuals).  We therefore opted to use a TK18 systematics model to enable a fair comparison between our results. We obtained the best fit using an exponential trend in time, a constant offset after orbit 14 (where the guide stars are reacquired), and the non-parameteric orbit-long ramp model. This model has one more free parameter than the systematics model given in Equation~\ref{eq:sys}. Figure\,\ref{fig:bestfit} shows the best fit models. 
+%For the systematics, we tested the XY decorrelation model described above, but found that it did not perform as well as the systematics models presented in TK18 (10\% higher rms and time-correlated residuals).  We therefore opted to use a TK18 systematics model to enable a fair comparison between our results. We obtained the best fit using an exponential trend in time, a constant offset after orbit 14 (where the guide stars are reacquired), and the non-parameteric orbit-long ramp model.  This model has one more free parameter than the XY decorrelation model given in Equation~\ref{eq:sys}. 
 
 Similar to the findings of TK18, the moon model improved the fit quality by a $\Delta\chi^2 = 29.9$. Notably, however, the moon model fit to the TK18 data does not perform better than the no-moon model fit to our new data (rms of 362 versus 356 ppm), even with the additional seven free parameters.  %This difference in fit quality corresponds to $\Delta\mathrm{BIC} = 31.2$, which is strong evidence against the moon.  
 
@@ -180,7 +183,9 @@ The mid-transit times from the two fits agree better. TK18 found that the planet
 \end{figure}
 
 \section{Discussion}
-A natural question arising from our results is what the difference is between TK18 and the new fits presented here. One possibility is that the source of the discrepancy is the extracted transit light curves themselves. As shown in Figure\,\ref{fig:raw}, our measured count rate ranges from $2.46 -2.74\%$ lower than the TK18 light curve, and there is a small bump in the difference between the two data sets near the location of the moon transit identified in the TK18 data (see the bottom panel).
+A natural question arising from our results is what the difference is between TK18 and the new fits presented here. Since we found that
+
+One possibility is that the source of the discrepancy is the extracted transit light curves themselves. As shown in Figure\,\ref{fig:raw}, our measured count rate ranges from $2.46 -2.74\%$ lower than the TK18 light curve, and there is a small bump in the difference between the two data sets near the location of the moon transit identified in the TK18 data (see the bottom panel).
 
  We explored several modifications to our pipeline to attempt to reproduce the TK18 reduction. These included rotating the image by 0.5 degrees, using the same aperture as TK18 to extract the spectrum, and scaling the master sky flat for the background subtraction (rather than just subtracting the median). None of these modifications had a significant effect on our results. 
 
