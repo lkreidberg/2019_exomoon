@@ -1,0 +1,68 @@
+We thank the referee for a helpful report, and respond point-by-point below.
+
+Sincerely,
+
+Laura Kreidberg, on behalf of the coauthors
+
+
+***
+- Your data reduction suggests that there is no sign of a moon transit in the HST data. A moon model, however, might still be substantially more likely from a statistical perspective, if, for example, the three transits from Kepler had distinct and clear transit features suggestive of an exomoon. The moon might simply have passed the stellar disk as seen from Earth during the HST transit (see Martin et al. 2019, arXiv:1901.06366), although I acknowledge that this scenario would be entirely different from the one proposed by Teachey & Kipping (2018b). Moreover, the transit timing effect of the planet was emphasized as an independent argument by T&K, and TTVs are obviously not available from the analysis of a single transit (though you compare your T0 with the one found by T&K). So analyzing the HST data alone cannot possibly answer the question about the exomoon candidate in general and your analysis is necessarily much more limited than that of T&K. That said, the results of T&K are strongly dependent on the transit visible in the HST data. So if you don't find a photometric moon signature in the HST then the arguments of T&K collapse. I'd like to ask you to be very clear in your manuscript that the likelihood of a moon around Kepler-1625b can only be addressed by analyzing the combined Kepler/HST, while you only examine the HST data. In this sense, strictly speaking you cannot fully answer the question about this moon candidate although I agree that you can be confident to state that the moon *would* likely disappear entirely from the MCMC simulations of T&K if the signature is lost in the HST data.
+*
+
+Yes, we agree that our analysis of the HST data alone is more limited than a reanalysis of HST + Kepler. The reason we elected not to use the Kepler data is that TK18 actually found that the evidence for lunar transits in the Kepler data sets went away after the data was reprocessed with a new Kepler pipeline. In section 2 of TK18, they state:
+
+"We fit photodynamical models (21) to the revised Kepler data, using the updated contamination factors from SOC version 9.3, before introducing the new HST data. Bayesian model selection revealed only a modest preference for the moon model, with the Bayes factor (K), going from 2 log K = 20.4 in our original study down to just 1.0 now."
+
+In addition, Rodenbeck et al. 2018 found that the evidence for lunar transits in the Kepler data was highly sensitive to the detrending algorithm used on the light curve.  So, since the Kepler photometry has already been reanalyzed twice and the lunar transit-like features have been called into question both times, we did not think it would be informative to include the Kepler data in our analysis. 
+
+However, it is true the planet's transit time measured by Kepler *is* informative about the possibility of TTVs, and we do recover the same TTV signal as TK18. To clarify these points, we have revised the text. 
+
+The final paragraphs of the introduction now read: 
+
+"The first evidence for the exomoon candidate, Kepler-1625b I, was based on observations from Kepler. The light curve showed drops in stellar flux that were attributed to a transiting exomoon; however, later analysis called this result into question, showing that the moon transit features were highly sensitive to the Kepler reduction pipeline and the algorithm used to detrend the data (Teachey & Kipping 2018; Rodenbeck et al. 2018).
+
+Subsequent follow-up observations with HST revived the possibility of an exomoon in the system based on two factors: a small drop in the system flux after the planet’s transit egress and a transit timing variation (Teachey & Kipping 2018, hereafter TK18). The best fit moon had a large radius (comparable to that of Neptune), and if real, would be unlike any moon in the Solar System.
+
+Since the primary evidence for the exomoon now rests on the HST transit light curve, in this work we perform an independent reduction and fit to the HST data and compare it to the results from TK18."
+
+We also modified the text in Section 4.1 about the TTV to be more clear. It now reads:
+
+"Although the two data sets yield different constraints on the moon properties, the planet’s mid-transit time agrees to better than 1 sigma for the two fits. The transit time is earlier than expected based on the Kepler data (3σ confidence; TK18), suggesting that there are transit timing variations in the system. Such variation could arise from the presence of a moon, as suggested by TK18; however, the variation could also be caused by another planet in the system."
+
+
+As a final point, after we submitted our paper we learned of a new independent analysis of both the Kepler and HST data (Heller et al. 2019). That work also call into question the existence of the exomoon (though for different reasons than what we present). Given the finicky nature of the data analysis, we think it is worthwhile to have both results in the literature. We address this new work with a brief paragraph in Section 5, that reads "During the referee process for this work, we learned of another manuscript that also reanalyzed the HST transit observation (Heller et al. 2019). The best fit favored a moon model similar to that found by TK18; however, an MCMC analysis did not converge on this model, leading the authors to conclude that the highest likelihood solution may be an outlier."
+
+
+
+***
+- In Fig. 2, the data of TK18 is shown above the data that you obtain with your own extraction pipeline. Hence, it might be helpful to swap the legends (first "TK18", then "This work") and also start the caption by first mentioning the data of TK18 and then yours. Moreover, in the bottom panel of Fig. 2 it would be helpful to see if you show "TK18 - yours" or "yours - TK18". From the algebraic signs along the ordinate I conclude its really "yours - TK18". Intuitively, having read the paper up to this point for the first time, I would have thought that "yours - TK18" would result in a kink indicating the transit-like feature produced by T&K but not produced by your data reduction. And indeed this kink is there! I only learned in Sect. 5 that you are actually aware of this feature. It might be worth addressing this kink in the text when the Figure is first mentioned in Sect. 3.
+*
+Good points! We modified the figure legends as suggested, and added the following text to section 2: "The broadband light curve is shown in Figure 2, in comparison to the light curve from TK18. We note that there are differences between the two data sets, particularly a kink near the moon-like transit feature identified by TK18."
+
+
+***
+- Sect. 3.1, moon model: you say that you fix the planetary orbital period to 287.378948 d. This might be plausible for the no-moon model. But for the moon model, the planet does not have a fixed period but rather the barycenter of the planet-moon binary system has a fixed period, whereas the planet should perform a Keplerian motion around this local barycenter, at least to reasonable approximation neglecting the star's gravitational/tidal effects on the planetary orbit. Could you please clarify? Also, does your parameterization and usage of the REBOUND code (which I am not familiar with) take into account the local motion of the planet and the moon around the barycenter? This is absolutely crucial for the proposed Kepler-1625 scenario because the moon can complete a significant fraction of its orbit during the transit.
+
+***
+Thanks, we modified the text in section 3.1 to clarify this point. The period we refer to is the period of the planet-moon barycenter. The REBOUND code is a full nbody integrator that propagates the 3D position of the star, planet, and moon over time under the influence of gravity.
+
+ We elected not to vary the period of the planet-moon barycenter because it is poorly constrained from a single transit observation. A longer period would cause a longer transit duration for the planet, but this could equivalently result from a smaller impact parameter, a larger star, or (potentially) a massive moon that significantly perturbs the planetary orbit. 
+
+
+
+
+***
+Sect. 3.1, moon model: the "moon inclination" is one free parameter in your model. When first reading about this parameter (and of the ascending node) in Sect. 3.1., I thought the inclination would be the orbital inclination of the moon with spect to the line of sight. But then at the end of the 3rd paragraph in Sect. 3.1 I learned that the moon inclination is sampled between 89.7 and 90 degrees and so this reminds me of the inclination against the line of sight used for single exoplanets, which is equivalent to a straight-line transit path across the stellar disk with a fixed transit impact parameter. If the planet-moon orbital plane, however, is not coplanar with the circumstellar orbital plane of the planet-moon barycenter, then the moon does not have a fixed transit impact parameter or "inclination" with respect to the star. In fact, it would perform kind of a sinusoidal apparent motion on the celestial plane (but really a winded curly circumstellar orbital motion in 3D). So what is your "moon inclination" really? And do you take into account the full 3D motion of the moon, which possibly results in a changing vertical distance of the moon with respect to the straight-line path of the planet-moon barycenter?
+*
+As we discuss above, the REBOUND model models the 3D trajectory of the star, planet, and moon.  The moon inclination is defined relative to the inclination of the planet. That is, if the moon inclination is 90 degrees, the moon will transit the planet with an impact parameter of 0. 
+
+In writing our response to this point, we realized that the inclination range we specified is overly restrictive. We ran a new MCMC where inclination is restricted to solutions where the moon eclipses the full disk of the star. We made this requirement to exclude non-transiting moons (which could have arbitrarily large radii). The constraints on the moon radius are essentially unchanged - we now find a 3 sigma upper limit on the radius of 3.6 Earth radii (compared to 3.5 Earth radii in our previous MCMC run).
+
+
+***
+
+- Sect. 3.1, your estimates of the planetary mass: note that this roughly Jupiter-sized object could, in principle, also be a brown dwarf or even a low-mass star (Heller 2018, A&A, 610, 39: Fig. 1 & Table 1), within the uncertainties of the stellar radius. From what I understand, this previous analysis is irrespective of the existence of the moon. It might be useful to at least mention this possibility, or does your new parameterization of the star reject such a scenario?
+
+*
+
+Our prior on the planet mass (in M_earth) was log-normal with a mean of 2.5 and a standard deviation of 0.5. The posterior probability is nearly identical (M = 10^(2.2 +/- 0.5)), so the allowed mass can be as high as 5000 M_earth (16 M_jup). We added a description of the posterior probability for the planet mass and radius to section 4.

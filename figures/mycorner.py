@@ -216,6 +216,8 @@ def corner(xs, ys, bins=20, range=None, weights=None, color="k",
 
         n, _, _ = ax.hist(y1, color = 'r',  normed = True, histtype = 'step') 
 
+        #if i == 0: ax.xlim(0,5)
+
         if truths is not None and truths[i] is not None:
             ax.axvline(truths[i], color=truth_color)
 
@@ -255,6 +257,8 @@ def corner(xs, ys, bins=20, range=None, weights=None, color="k",
 
         # Set up the axes.
         ax.set_xlim(range[i])
+        if i == 1: ax.set_xlim(0, 5) #LK
+
         if scale_hist:
             maxn = np.max(n)
             ax.set_ylim(-0.1 * maxn, 1.1 * maxn)
@@ -312,6 +316,7 @@ def corner(xs, ys, bins=20, range=None, weights=None, color="k",
             hist2d(y2, y1, ax=ax, range=[range[j], range[i]], weights=weights,
                    color='red', smooth=smooth, bins=[bins[j], bins[i]],
                    **hist2d_kwargs)
+            print("ranges", range)
 
 
             if truths is not None:
